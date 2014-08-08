@@ -45,7 +45,7 @@ md_file_paths.each { |path|
   link= File.basename(path, '.md');   
   metadata_hash = parse_firstline_comment_as_hash(path)
   puts "Adding #{link} to index.md"
-  content+="* [#{link}](/blog/#{link}) - (#{metadata_hash['created_at']})\n" if link!='index' }
+  content+="* [#{link}](/blog/#{link}) - (#{metadata_hash['created_at']})\n" if (link!='index' && link!='about')}
 
 File.write(path, content) 
 
