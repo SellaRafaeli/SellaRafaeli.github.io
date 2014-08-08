@@ -1,0 +1,10 @@
+SellaRafaeli.com
+==============
+
+This is my homepage.
+
+  - Here you can read about me
+  - Various stuff
+  - Profit
+
+Why don't you look at my blog? <a href="/blog">blog</a>.
