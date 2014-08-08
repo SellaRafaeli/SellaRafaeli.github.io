@@ -7,7 +7,7 @@ md_file_paths = ['index.md']
 html_paths = []
 
 def wrap_file_in_html(file_path, custom_content = nil)     
-   template = "<html><head><title>#{File.basename(file_path, ".html")} </title>"+
+   template = "<html><head> <meta charset='utf-8'> <title>#{File.basename(file_path, ".html")} </title>"+
                         '<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>'+
                         "</head><body>#{custom_content || File.read(file_path)}</body></html>"
    File.write(file_path,template)
@@ -30,15 +30,18 @@ Find.find(tar_dir) do |path|
 end
 
 #2.5 generate blog/index.md
-path = "#{tar_dir}/index.md"
-content = "##Blog\n"
+path = "#{tar_dir}/blog_src/index.md"
+content = ""
+content += "## Blog \n"
 content+="<!-- this file is auto-created. -->\n\n"
+#content += "## Sella's Blog\n "
+content += "###### now that's what I'm talking about\n"
 #md_file_paths.each do |path| content+="* #{File.basename(path, '.md')}\n" end
 md_file_paths.each { |path| 
   link= File.basename(path, '.md');   
   metadata_hash = parse_firstline_comment_as_hash(path)
   puts "Adding #{link} to index.md"
-  content+="* [#{link}](http://www.sellarafaeli.com/blog/#{link}) - (#{metadata_hash['created_at']})\n" if link!='index' }
+  content+="* [#{link}](/blog/#{link}) - (#{metadata_hash['created_at']})\n" if link!='index' }
 
 File.write(path, content) 
 
@@ -53,10 +56,6 @@ md_file_paths.each do |path|
   File.write(html_path, Kramdown::Document.new(text, input: 'GFM', coderay_line_numbers: nil).to_html)      ## use Kramdown to parse Github-flavored-markdown (GFM)
   wrap_file_in_html(html_path)    
 end
-
-#4 generate a blog/index/html
-require('debugger')
-path = 'blog/index.html'
 
 puts "Done!"
   
