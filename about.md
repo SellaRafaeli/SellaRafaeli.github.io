@@ -1,6 +1,6 @@
 ### About
 
-(There's no point in having an 'about' page if you're not going to use it to brag.) 
+(Disclaimer: There's no point in having an 'about' page if you're not going to use it to brag.) 
 
 I have hitchhiked through Tierra del Fuego, paraglided over Lima, ice-climbed to 6,000 meters in Bolivia (hardest thing I've ever done), rode on the roof of a jeep driven by buddhist monks up to remote monasteries in the Himalayan Spiti Valley, swam through underwater caves near Semuc Champey (Guatemala), ziplined hundreds of meters above the ground through the canopy forest tree-tops in Costa Rica, drove by car from San Francisco to NYC through 19 states, biked through North-Western Ireland, eventually flipping, crashing, and dislocating my shoulder, and hiked through icy-water chest-deep rivers to the southern-most point of the South-American continent. 
 
