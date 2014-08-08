@@ -47,7 +47,10 @@ md_file_paths.each do |path|
   html_path = path.sub('.md','.html').sub('_src','');  
   html_paths << html_path
   puts "generating #{path} into #{html_path}..."
-  system"cat #{path} | mdown > #{html_path}"
+  #system"cat #{path} | mdown > #{html_path}"                                                                ##<- use "mdown"
+  require 'kramdown'
+  text = File.read(path)
+  File.write(html_path, Kramdown::Document.new(text, input: 'GFM', coderay_line_numbers: nil).to_html)      ## use Kramdown to parse Github-flavored-markdown (GFM)
   wrap_file_in_html(html_path)    
 end
 
