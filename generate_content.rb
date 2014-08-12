@@ -47,6 +47,13 @@ md_file_paths.each { |path|
   puts "Adding #{link} to index.md"
   content+="* [#{link}](/blog/#{link}) - (#{metadata_hash['created_at']})\n" if (link!='index' && link!='about')}
 
+external_links = [];
+external_links.push({title: "Git 'Rebase' For Startups", url: 'https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14', created_at: '2014-01-30'})
+external_links.push({title: "Git  Rebase -i Belong To Us", url: 'https://medium.com/@sellarafaeli/git-rebase-i-belong-to-us-4d7010387683', created_at: '2014-02-17'})
+
+external_links.each { |link| content+="* [#{link[:title]}](#{link[:url]}) - (#{link[:created_at]})\n" }
+content+= "* Older posts (2009-2014): [http://sellarafaeli.wordpress.com](http://sellarafaeli.wordpress.com)"
+
 File.write(path, content) 
 
 #3. Turn each of them into an HTML file with same name in same directory
