@@ -1,4 +1,9 @@
 #run ruby generate_content.rb blog_src
+
+if !ARGV[0] 
+  puts 'usage: ruby generate_content.rb blog_src'
+  exit(0)
+end
 #1. Setup
 tar_dir = ARGV[0]
 puts "Converting Markdowns in folder #{tar_dir}"
@@ -34,9 +39,10 @@ Find.find(tar_dir) do |path|
 end
 
 #2.5 generate blog/index.md
-path = "#{tar_dir}/blog_src/index.md"
+puts "generating blog/index.md"
+path = "#{tar_dir}/index.md"
 content = ""
-content += "## Blog \n"
+content += "## Sella's Blog \n"
 content+="<!-- this file is auto-created. -->\n\n"
 #content += "## Sella's Blog\n "
 content += "###### now that's what I'm talking about\n"
@@ -50,6 +56,7 @@ md_file_paths.each { |path|
 external_links = [];
 external_links.push({title: "Git 'Rebase' For Startups", url: 'https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14', created_at: '2014-01-30'})
 external_links.push({title: "Git  Rebase -i Belong To Us", url: 'https://medium.com/@sellarafaeli/git-rebase-i-belong-to-us-4d7010387683', created_at: '2014-02-17'})
+external_links.push({title: "Daat - A Good Hebrew Content Site", url: 'https://medium.com/@sellarafaeli/reading-4bb50bc5168b', created_at: '2014-09-02'})
 
 external_links.each { |link| content+="* [#{link[:title]}](#{link[:url]}) - (#{link[:created_at]})\n" }
 content+= "* Older posts (2009-2014): [http://sellarafaeli.wordpress.com](http://sellarafaeli.wordpress.com)"

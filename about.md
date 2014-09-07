@@ -1,6 +1,4 @@
-### About
-
-(Disclaimer: There's no point in having an 'about' page if you're not going to use it to brag.) 
+### About Me
 
 I have hitchhiked through Tierra del Fuego, paraglided over Lima, ice-climbed to 6,000 meters in Bolivia (hardest thing I've ever done), rode on the roof of a jeep driven by buddhist monks up to remote monasteries in the Himalayan Spiti Valley, swam through underwater caves near Semuc Champey (Guatemala), ziplined hundreds of meters above the ground through the canopy forest tree-tops in Costa Rica, drove by car from San Francisco to NYC through 19 states, biked through North-Western Ireland, eventually flipping, crashing, and dislocating my shoulder, and hiked through icy-water chest-deep rivers to the southern-most point of the South-American continent. 
 
@@ -10,7 +8,7 @@ I have slept at the only nudist beach in Uruguay, crawled through the silver min
 
 I have visited over 30 countries, am fluent in 3 languages (English, Hebrew, Spanish), mediocre at 3 others (German, Russian, literary Arabic) and have studied some French, Hindi, and American Sign Language (the coolest word in ASL is "pizza"). I have hosted over 50 CouchSurfers.
 
-I got a 786 on my Israeli SAT (top 0.001 of populace) with no preparation course. I have written books about  [linear algebra](https://sites.google.com/site/linearit1hujibook/), about [Git](http://sellarafaeli.wordpress.com/2014/03/23/git-sandbox-book/), and about data-mining (classified).
+I got a 786 on my Israeli SAT (top 0.001%) with no preparation course. I have written books about  [linear algebra](https://sites.google.com/site/linearit1hujibook/), about [Git](http://sellarafaeli.wordpress.com/2014/03/23/git-sandbox-book/), and about data-mining (classified).
 
 My army service was as an intelligence officer in Israel's elite Intelligence technological unit for five years, leading software systems that would change the knowledge-management and data-mining workflows of thousands and winning numerous awards. 
 
