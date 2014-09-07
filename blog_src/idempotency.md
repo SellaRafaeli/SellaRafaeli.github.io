@@ -9,8 +9,8 @@ An **Idempotent operation** is one that has the same effects whether executed on
 **Idempotent operations are important because they allow complex systems to remain fault-tolerant, in that they facilitate easy recovery from corrupted flows.**
 
 Let's examine this with a real-world example we had at Fiverr. At Fiverr I work on the team in charge of the order flow. Roughly, after a user pays for an order (let's assume, ordering a 5$ Gig), we perform the following:
-  1. *Notate the user has paid. *
-  2. *Initiate the order, creating the necessary internal objects. *
+  1. *Notate the user has paid.*
+  2. *Initiate the order, creating the necessary internal objects.*
   3. *Pass the money from the buyer to the seller (Partially/sometimes this involves external systems or payment vendors, such as Paypal.)*
   4. *Pass the relevant commissiona from the transactions to Fiverr (and Paypal).*
   5. *Update all relevant parties (buyer, seller, internal statistics).*
