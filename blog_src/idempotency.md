@@ -1,3 +1,4 @@
+<!-- {"created_at": "2014-09-07"} -->
 ## Idempotency
 
 If you have a BE feature that is complicated and important enough, you'll want it to be *idempotent*. 
