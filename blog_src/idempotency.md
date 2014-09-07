@@ -34,7 +34,8 @@ Similar logic would be applied at other steps. Basically, each step would be in 
 
 **Now that the flow is idempotent, failures at any point are not a problem - we can just rerun the entire flow, knowing it will no-op the steps already taken, and will perform anything not previous executed.** As in the example above, the implementation is straight-forward. 
 
-It's worth pointing out that idempotency is agnostic to whether each step is performed via a function, a class, or a separate service. It also worth mentioning that SQL transactions are not strong enough to guarantee idempotency flow - while SQL is able to guarantee 'all-or-nothing', complex business logic and scale often necessitate spreading a single flow over multiple DBs (some of which might be NoSQL) or altogether external processes, each of which might fail internally. **App-level idempotency, however, insures us from any and every failure - fix whatever failed and just run it again. **
+It's worth pointing out that idempotency is agnostic to whether each step is performed via a function, a class, or a separate service. It also worth mentioning that SQL transactions are not strong enough to guarantee idempotency flow - while SQL is able to guarantee 'all-or-nothing', complex business logic and scale often necessitate spreading a single flow over multiple DBs (some of which might be NoSQL) or altogether external processes, each of which might fail internally. **App-level idempotency, however, insures us from any and every failure - fix whatever failed and just run it again.**
+
 
 As a side note, this even makes debugging (any flow thus implemented) since you can re-execute the same action over and over, even in production.
 
