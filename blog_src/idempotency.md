@@ -2,7 +2,7 @@
 
 ## Idempotency
 
-If you have a BE feature that is complicated and important enough, you'll want it to be *idempotent*. 
+If you have a BE flow that is complicated and important enough, you'll want it to be *idempotent*. 
 
 An **Idempotent operation** is one that has the same effects whether executed once or any n > 1 times.  An example would be a 'Set.add(x)' or 'Set.remove(x)' - obviously these can be called multiple times safely, without having wrongful side effects. An example of non-idempotent operations would be increasing an argument by one, or adding an item to an array. 
 
