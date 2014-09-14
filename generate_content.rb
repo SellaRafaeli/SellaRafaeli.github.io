@@ -14,6 +14,7 @@ html_paths = []
 def wrap_file_in_html(file_path, custom_content = nil)     
    template = "<html><head> <meta charset='utf-8'> <title>#{File.basename(file_path, ".html")} </title>"+
                         '<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>'+
+                        '<link href="/assets/main.css" rel="stylesheet"></link>'+
                         "</head>"+
                         '<body>'+
                         "<a href='/'>Home</a>" + "  |  " +
