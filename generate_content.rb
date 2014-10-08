@@ -52,7 +52,7 @@ md_file_paths.each { |path|
   link= File.basename(path, '.md');   
   metadata_hash = parse_firstline_comment_as_hash(path)
   puts "Adding #{link} to index.md"
-  content+="* [#{link}](/blog/#{link}) - (#{metadata_hash['created_at']})\n" if (link!='index' && link!='about')}
+  content+="* [#{link}](/blog/#{link}) - (#{metadata_hash['created_at']})\n" if (link!='index' && link!='about') unless metadata_hash['draft']}
 
 external_links = [];
 external_links.push({title: "Git 'Rebase' For Startups", url: 'https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14', created_at: '2014-01-30'})
