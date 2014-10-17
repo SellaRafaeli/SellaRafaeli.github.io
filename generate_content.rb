@@ -4,11 +4,12 @@ if !ARGV[0]
   puts 'usage: ruby generate_content.rb blog_src'
   exit(0)
 end
+
 #1. Setup
 tar_dir = ARGV[0]
 puts "Converting Markdowns in folder #{tar_dir}"
 
-md_file_paths = ['index.md']
+md_file_paths = ['index.md', 'about.md']
 html_paths = []
 
 def wrap_file_in_html(file_path, custom_content = nil)     
