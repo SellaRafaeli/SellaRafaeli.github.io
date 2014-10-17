@@ -14,13 +14,17 @@ html_paths = []
 
 def wrap_file_in_html(file_path, custom_content = nil)     
    template = "<html><head> <meta charset='utf-8'> <title>#{File.basename(file_path, ".html")} </title>"+
-                        '<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>'+
+                        #'<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>'+
+                        '<link href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css" rel="stylesheet"></link>'+
                         '<link href="/assets/main.css" rel="stylesheet"></link>'+
                         "</head>"+
                         '<body>'+
+                        '<article class="markdown-body">'+
                         "<a href='/'>Home</a>" + "  |  " +
-                        "<a href='/blog'>Blog</a>" +
-                        "#{custom_content || File.read(file_path)}</body></html>"
+                        "<a href='/blog'>Blog</a>" +                        
+                        "#{custom_content || File.read(file_path)}"+
+                        '</article>'+
+                        "</body></html>"
    File.write(file_path,template)
 end
 

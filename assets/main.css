@@ -1,5 +1,6 @@
-.code {
-	background-color: whitesmoke;
-	border-radius: 16px;
-	padding: 16px;
+.markdown-body {
+        min-width: 200px;
+        max-width: 790px;
+        margin: 0 auto;
+        padding: 30px;
 }
