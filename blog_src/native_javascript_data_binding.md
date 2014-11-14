@@ -83,6 +83,7 @@ user = {}
 bindDomElemToObjProp($("#foo"), user, 'name');
 //enter 'obama' into input
 user.name //Obama. 
+~~~
 
 *[JSFiddle](http://jsfiddle.net/v2bw6658/4/)*
 

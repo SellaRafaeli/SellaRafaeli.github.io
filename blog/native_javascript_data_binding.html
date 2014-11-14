@@ -89,13 +89,16 @@ user = {}
 bindDomElemToObjProp(<span style="color:#369;font-weight:bold">$</span>(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#foo</span><span style="color:#710">&quot;</span></span>), user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>);
 <span style="color:#777">//enter 'obama' into input</span>
 user.name <span style="color:#777">//Obama. </span>
+</pre></div>
+</div>
+</div>
 
-*[JSFiddle](http:<span style="color:#777">//jsfiddle.net/v2bw6658/4/)*</span>
+<p><em><a href="http://jsfiddle.net/v2bw6658/4/">JSFiddle</a></em></p>
 
-That was pretty awesome. To wrap up, <span style="color:#080;font-weight:bold">in</span> practice you could combine the two into a single <span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">to</span> create a two-way data-binding:
+<p>That was pretty awesome. To wrap up, in practice you could combine the two into a single function to create a two-way data-binding:</p>
 
-~~~ javascript 
-<span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">bindObjPropToDomElem</span>(obj, property, domElem) { 
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">bindObjPropToDomElem</span>(obj, property, domElem) { 
   Object.observe(obj, <span style="color:#080;font-weight:bold">function</span>(changes){    
     changes.forEach(<span style="color:#080;font-weight:bold">function</span>(change) {
       <span style="color:#369;font-weight:bold">$</span>(domElem).text(obj[property]);        
@@ -236,7 +239,7 @@ input1.<span style="color:#06B;font-weight:bold">onchange</span> = <span style="
 </div>
 </div>
 
-<h2 id="tldr">TL;DR:</h2>
+<h3 id="tldr">TL;DR:</h3>
 
 <p>Create a two way data-binding between model and view with native JavaScript as such:</p>
 
