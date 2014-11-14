@@ -84,7 +84,6 @@ bindDomElemToObjProp($("#foo"), user, 'name');
 //enter 'obama' into input
 user.name //Obama. 
 ~~~
-
 *[JSFiddle](http://jsfiddle.net/v2bw6658/4/)*
 
 That was pretty awesome. To wrap up, in practice you could combine the two into a single function to create a two-way data-binding:
