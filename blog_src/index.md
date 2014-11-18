@@ -5,6 +5,7 @@
 * [cofounder](/blog/cofounder) - (2014-08-08)
 * [git-book](/blog/git-book) - (2014-07-01)
 * [idempotency](/blog/idempotency) - (2014-09-07)
+* [jabjs-introduction](/blog/jabjs-introduction) - (2014-11-19)
 * [native_javascript_data_binding](/blog/native_javascript_data_binding) - (2014-11-10)
 * [Git 'Rebase' For Startups](https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14) - (2014-01-30)
 * [Git  Rebase -i Belong To Us](https://medium.com/@sellarafaeli/git-rebase-i-belong-to-us-4d7010387683) - (2014-02-17)

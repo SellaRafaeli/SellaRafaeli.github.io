@@ -41,7 +41,7 @@ end
 require 'Find'
 Find.find(tar_dir) do |path|
   md_file_paths << path if path =~ /.*\.md$/   
-  #(puts "removing #{path}...") && system("rm #{path}") if path =~ /.*\.html$/    #careful not to remove HTMLs from other folders! :) 
+  (puts "removing #{path}...") && system("rm #{path}") if path =~ /.*\.html$/    #careful not to remove HTMLs from other folders! :) 
 end
 
 #2.5 generate blog/index.md
