@@ -41,4 +41,4 @@ As a side note, this even makes debugging (any flow thus implemented) since you 
 
 For further reading,  see the obligatory and up-to-par [StackOverflow](http://stackoverflow.com/questions/1077412/what-is-an-idempotent-operation) and [Wikipedia](http://en.wikipedia.org/wiki/Idempotence) references. A quick glance is also recommended at the [Wiktionary page](http://en.wiktionary.org/wiki/idempotent), where you can see the etymology - *idem* ("the same") and *potent* (power). Ah, everything makes sense. 
 
-So - idempotency is awesome. Make your important flows re-runnable.  Thanks for reading. Comments and questions can be gladly sent to sella.rafaeli@gmail.com. *(Nov 2014)*
+So - idempotency is awesome. Make your important flows re-runnable.  Thanks for reading, comments and questions can be added to the [discussion on reddit](http://www.reddit.com/r/programming/comments/2msn2i/idempotent_flows_and_why_they_matter/) or sent to **sella.rafaeli@gmail.com**. *(Nov 2014)*
