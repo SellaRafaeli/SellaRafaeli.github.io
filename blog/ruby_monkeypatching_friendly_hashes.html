@@ -1,0 +1,81 @@
+<html><head> <meta charset='utf-8'> <title>ruby_monkeypatching_friendly_hashes </title><link href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css" rel="stylesheet"></link><link href="/assets/main.css" rel="stylesheet"></link></head><body><article class="markdown-body"><a href='/'>Home</a>  |  <a href='/blog'>Blog</a><!-- {"created_at": "2014-11-24"} -->
+
+<h2 id="friendly-ruby-hashes">Friendly Ruby Hashes</h2>
+
+<p>Let’s hack Ruby and <strong>make all hashes ‘with indifferent access’</strong>. To the monkeypatching-mobile! </p>
+
+<p>In Ruby, sometimes you access a hash with a symbol key when you should have used the same key as a string. This is annoying. Clearly the best practice is never to have the same key as both a hash and a string anyway (that would muy confusing), so why can’t you just access the hash with ‘indifferent’ access?</p>
+
+<p>You could use active_support’s <a href="http://api.rubyonrails.org/classes/ActiveSupport/HashWithIndifferentAccess.html">HashWithIndifferentAccess</a> or <a href="https://github.com/intridea/hashie">Hashie</a> or similar libs. These are cool, but cumbersome: you need to install the appropriate gems, and make sure that every time you’re dealing with a hash, you’re actually dealing with a hash that has been wrapped by the gem, since your native hashes will fail. This means verbose <code>HashWithIndifferentAccess</code> declarations all over the place, instead of Ruby’s usual sweet minimalism. (Internally using only strings, they also both have issues such as <code>wrapped_hash[:name]="Joe"; hash.keys.include?(:name) # false. Wut?</code>) </p>
+
+<p>But the core issue is the minimalism. The ideal behavior (IMHO) would be ruby handling <strong>any</strong> hash natively “with indifferent access” (at least for the most common get/set operations). No more “Did we set that property as a string or as a symbol?” and no more “Is this a regular hash or one with indifferent access?” <strong>Hashes should all be with indifferent access</strong>. </p>
+
+<p>Thankfully, Ruby is awesome enough to allow you to go nuts bashing up its internal native methods. This is of course extremely dangerous which is naturally why you should definitely do it (as a learning experience, at the very least). It is also a fun exercise (how do you redefine ‘get’ without using ‘get’?).</p>
+
+<p>Well, here is one solution:  </p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Hash</span>
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">[]</span>(key)
+    value = (fetch key, <span style="color:#069">nil</span>) || (fetch key.to_s, <span style="color:#069">nil</span>) || (fetch key.to_sym, <span style="color:#069">nil</span>)     
+  <span style="color:#080;font-weight:bold">end</span>
+
+  <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">[]=</span>(key,val)
+    <span style="color:#080;font-weight:bold">if</span> (key.is_a? <span style="color:#036;font-weight:bold">String</span>) || (key.is_a? <span style="color:#036;font-weight:bold">Symbol</span>) <span style="color:#777">#clear if setting str/sym</span>
+        <span style="color:#069">self</span>.delete key.to_sym
+        <span style="color:#069">self</span>.delete key.to_s        
+    <span style="color:#080;font-weight:bold">end</span>
+    merge!({key =&gt; val})
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span>
+</pre></div>
+</div>
+</div>
+
+<p>What have we done here (from an API point of view)? Run this code anywhere/time in your app, and now <strong>all hashes are natively with indifferent access</strong>. Specifically, getting with [] will return the value for both string or symbol, and setting with []= will <em>replace</em> the value for both string and symbol, leaving the last set key as the exact key. So:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>user = {<span style="color:#606">name</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Joe</span><span style="color:#710">'</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">age</span><span style="color:#710">'</span></span> =&gt; <span style="color:#00D">20</span>} <span style="color:#777">#literal hash with both symbols and strings as keys</span>
+user[<span style="color:#A60">:name</span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Joe</span><span style="color:#710">'</span></span>  <span style="color:#777"># duh</span>
+user[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Joe</span><span style="color:#710">'</span></span> <span style="color:#777"># cool!</span>
+user[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">age</span><span style="color:#710">'</span></span>] == <span style="color:#00D">20</span>     <span style="color:#777"># duh</span>
+user[<span style="color:#A60">:age</span>] == <span style="color:#00D">20</span>      <span style="color:#777"># cool!</span>
+
+user[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Bob</span><span style="color:#710">'</span></span>  <span style="color:#777"># replace symbol with string</span>
+user[<span style="color:#A60">:name</span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Bob</span><span style="color:#710">'</span></span>  <span style="color:#777"># cool!</span>
+user[<span style="color:#A60">:age</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">25</span><span style="color:#710">'</span></span>     <span style="color:#777"># replace string with symbol</span>
+user[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">age</span><span style="color:#710">'</span></span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">25</span><span style="color:#710">'</span></span>   <span style="color:#777"># cool!</span>
+user <span style="color:#777"># =&gt; {&quot;name&quot;=&gt;&quot;Bob&quot;, :age =&gt;&quot;25&quot;} </span>
+</pre></div>
+</div>
+</div>
+
+<p>That’s the gist of it. A couple of extra points:</p>
+
+<p>Since we replace the key with the last type set, this means external libraries will not be surprised:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>user = {<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Joe</span><span style="color:#710">'</span></span>}
+user[<span style="color:#A60">:name</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Bill</span><span style="color:#710">'</span></span>
+user.keys.include?(<span style="color:#A60">:name</span>) <span style="color:#777"># true. Better than Hashie and ActiveSupport. However, we still grant native access using 'fetch' (actually, this is exactly the opposite of Hashie, which does support &quot;fetch&quot; but does not support .keys. )</span>
+</pre></div>
+</div>
+</div>
+
+<p>We can also still use keys that are neither strings nor symbols (say, modules):</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">Foo</span>
+<span style="color:#080;font-weight:bold">end</span>
+
+user = {<span style="color:#036;font-weight:bold">Foo</span> =&gt; <span style="color:#00D">123</span>}
+user[<span style="color:#036;font-weight:bold">Foo</span>]            <span style="color:#777"># 123 </span>
+user[<span style="color:#A60">:Foo</span>]           <span style="color:#777"># nil</span>
+</pre></div>
+</div>
+</div>
+
+<p>Most importantly, however, <strong>we no longer have to worry about wrapping our hashes</strong>. Every hash is now a friendly hash. </p>
+
+<p>Thanks for reading! Please address any comments to <strong>sella.rafaeli@gmail.com</strong>. <em>(Nov 2014)</em></p>
+</article></body></html>
