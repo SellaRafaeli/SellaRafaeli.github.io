@@ -6,6 +6,7 @@
 * [git-book](/blog/git-book) - (2014-07-01)
 * [idempotency](/blog/idempotency) - (2014-09-07)
 * [jabjs-introduction](/blog/jabjs-introduction) - (2014-11-19)
+* [monads](/blog/monads) - (2014-11-29)
 * [native_javascript_data_binding](/blog/native_javascript_data_binding) - (2014-11-10)
 * [ruby_monkeypatching_friendly_hashes](/blog/ruby_monkeypatching_friendly_hashes) - (2014-11-24)
 * [Git 'Rebase' For Startups](https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14) - (2014-01-30)
