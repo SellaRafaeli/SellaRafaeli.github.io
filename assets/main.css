@@ -4,3 +4,9 @@
         margin: 0 auto;
         padding: 30px;
 }
+
+.created_at {
+    float: right;
+    text-align: right;
+    font-size: 90%;
+}

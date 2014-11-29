@@ -2,14 +2,14 @@
 <!-- this file is auto-created. -->
 
 ###### now that's what I'm talking about
-* [cofounder](/blog/cofounder) - (2014-08-08)
-* [git-book](/blog/git-book) - (2014-07-01)
-* [idempotency](/blog/idempotency) - (2014-09-07)
-* [jabjs-introduction](/blog/jabjs-introduction) - (2014-11-19)
-* [monads](/blog/monads) - (2014-11-29)
-* [native_javascript_data_binding](/blog/native_javascript_data_binding) - (2014-11-10)
-* [ruby_monkeypatching_friendly_hashes](/blog/ruby_monkeypatching_friendly_hashes) - (2014-11-24)
-* [Git 'Rebase' For Startups](https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14) - (2014-01-30)
-* [Git  Rebase -i Belong To Us](https://medium.com/@sellarafaeli/git-rebase-i-belong-to-us-4d7010387683) - (2014-02-17)
-* [Daat - A Good Hebrew Content Site](https://medium.com/@sellarafaeli/reading-4bb50bc5168b) - (2014-09-02)
-* Older posts (2009-2014): [http://sellarafaeli.wordpress.com](http://sellarafaeli.wordpress.com)
+* [monads](monads.html)<span class='created_at'>2014-11-29</span>
+* [ruby_monkeypatching_friendly_hashes](ruby_monkeypatching_friendly_hashes.html)<span class='created_at'>2014-11-24</span>
+* [jabjs-introduction](jabjs-introduction.html)<span class='created_at'>2014-11-19</span>
+* [native_javascript_data_binding](native_javascript_data_binding.html)<span class='created_at'>2014-11-10</span>
+* [idempotency](idempotency.html)<span class='created_at'>2014-09-07</span>
+* [Daat - A Good Hebrew Content Site](https://medium.com/@sellarafaeli/reading-4bb50bc5168b)<span class='created_at'>2014-09-02</span>
+* [cofounder](cofounder.html)<span class='created_at'>2014-08-08</span>
+* [git-book](git-book.html)<span class='created_at'>2014-07-01</span>
+* [Git Rebase -i Belong To Us](https://medium.com/@sellarafaeli/git-rebase-i-belong-to-us-4d7010387683)<span class='created_at'>2014-02-17</span>
+* [Git 'Rebase' For Startups](https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14)<span class='created_at'>2014-01-30</span>
+* [Older posts - 2009-2014](http://sellarafaeli.wordpress.com)
