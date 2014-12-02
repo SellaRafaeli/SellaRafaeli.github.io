@@ -230,4 +230,4 @@ user = {}
 bindModelInput(user,'name',document.getElementById('foo')); //hey presto, we now have two-way data binding.
 ~~~
 
-Thanks for reading. Comments at [discussion on reddit](http://redd.it/2manfb) or at sella.rafaeli@gmail.com.
+Thanks for reading. Previously published on [JavaScript Weekly](http://javascriptweekly.com/issues/207), comments at [reddit](http://redd.it/2manfb) or at sella.rafaeli@gmail.com.
