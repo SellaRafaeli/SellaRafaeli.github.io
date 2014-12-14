@@ -2,7 +2,7 @@
 <!-- this file is auto-created. -->
 
 ###### now that's what I'm talking about
-* [responsible_software](responsible_software.html)<span class='created_at'>2014-14-12</span>
+* [responsible_software](responsible_software.html)<span class='created_at'>2014-12-14</span>
 * [monads](monads.html)<span class='created_at'>2014-11-29</span>
 * [ruby_monkeypatching_friendly_hashes](ruby_monkeypatching_friendly_hashes.html)<span class='created_at'>2014-11-24</span>
 * [jabjs-introduction](jabjs-introduction.html)<span class='created_at'>2014-11-19</span>
