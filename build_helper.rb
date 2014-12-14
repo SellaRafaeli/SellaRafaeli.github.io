@@ -7,7 +7,7 @@ def wrap_file_in_html(file_path, custom_content = nil)
                         "</head>"+
                         '<body>'+
                         '<article class="markdown-body">'+
-                        "<a href='/'>Home</a>" + "  |  " +
+                        "<a href='/'>SellaRafaeli.com Home</a>" + "  |  " +
                         "<a href='/blog'>Blog</a>" +                        
                         "#{custom_content || File.read(file_path)}"+
                         '</article>'+
