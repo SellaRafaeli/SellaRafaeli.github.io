@@ -2,6 +2,7 @@
 <!-- this file is auto-created. -->
 
 ###### now that's what I'm talking about
+* [how_to_recruit_software_engineers](how_to_recruit_software_engineers.html)<span class='created_at'>2014-12-15</span>
 * [responsible_software](responsible_software.html)<span class='created_at'>2014-12-14</span>
 * [monads](monads.html)<span class='created_at'>2014-11-29</span>
 * [ruby_monkeypatching_friendly_hashes](ruby_monkeypatching_friendly_hashes.html)<span class='created_at'>2014-11-24</span>
