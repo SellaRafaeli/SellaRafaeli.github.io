@@ -1,5 +1,5 @@
 # build the blog from source.
-require './build_helper'
+require './helper_build'
 require 'JSON'
 
 require 'Find'
