@@ -20,9 +20,19 @@ The site is a minor social network to find potential co-founders for your startu
 
 ![](http://i.imgur.com/d1ZXO5k.png)
 
-We click 'read more' and see her full profile page: description, what she is looking for, participates in the Israeli Woman Entrepreneurship Program... bla bla. We notice the URL is `http://www.example.com/Profile.aspx?id=927&name=Naama]` .aspx? Yuck, but whatever. Is that the user ID exposed there in the URL? That's already a bad sign, though not a security vulnerability quite yet. Naama is presumably user number 927 (give or take) to join this site. 
+We click 'read more' and see her full profile page: description, what she is looking for, participates in the Israeli Woman Entrepreneurship Program... bla bla. We notice the URL is now 
 
-Let's see if we can work with that... hmmm, looks like we can; here's one example. After signing up for the site, you confirm via email and reach a link that looks like this `http://www.example.com/AfterPageLogin.aspx?msgId=4&loc=1&id=1998`. (Hello again, user ID. So now we now example.com has about 2,000 users. Not a breach yet, but awkward to have that revealed.) Clicking on that link takes you to a 'welcome, your-name' page. But wait, this looks like a pretty naive link - how did it know who we are? Surely not just by the user ID? What would happen if we change the id that was assigned to us with a different id...? Say, let's try it with Naama's id: `http://www.example.com/AfterPageLogin.aspx?msgId=4&loc=1&id=927`. (notice the 927 at the end)
+`http://www.example.com/Profile.aspx?id=927&name=Naama`
+
+Is that the user ID exposed there in the URL? That's already a bad sign, though not a security vulnerability quite yet. Naama is presumably user number 927 (give or take) to join this site. 
+
+Let's see if we can work with that... hmmm, looks like we can; here's one example. After signing up for the site, you confirm via email and reach a link that looks like this 
+
+`http://www.example.com/AfterPageLogin.aspx?msgId=4&loc=1&id=1998`
+
+(Hello again, user ID. So now we now `example.com` has about 2,000 users. Not a breach yet, but awkward to have that revealed.) Clicking on that link takes you to a 'welcome, your-name' page. But wait, this looks like a pretty naive link - how did it know who we are? Surely not just by the user ID? What would happen if we change the id that was assigned to us with a different id...? Say, let's try it with Naama's id: 
+
+`http://www.example.com/AfterPageLogin.aspx?msgId=4&loc=1&id=927` (notice the 927 at the end)
 
 ![](http://i.imgur.com/tHWcw05.png)
 

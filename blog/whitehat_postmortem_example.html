@@ -20,9 +20,19 @@
 
 <p><img src="http://i.imgur.com/d1ZXO5k.png" alt="" /></p>
 
-<p>We click ‘read more’ and see her full profile page: description, what she is looking for, participates in the Israeli Woman Entrepreneurship Program… bla bla. We notice the URL is <code>http://www.example.com/Profile.aspx?id=927&amp;name=Naama]</code> .aspx? Yuck, but whatever. Is that the user ID exposed there in the URL? That’s already a bad sign, though not a security vulnerability quite yet. Naama is presumably user number 927 (give or take) to join this site. </p>
+<p>We click ‘read more’ and see her full profile page: description, what she is looking for, participates in the Israeli Woman Entrepreneurship Program… bla bla. We notice the URL is now </p>
 
-<p>Let’s see if we can work with that… hmmm, looks like we can; here’s one example. After signing up for the site, you confirm via email and reach a link that looks like this <code>http://www.example.com/AfterPageLogin.aspx?msgId=4&amp;loc=1&amp;id=1998</code>. (Hello again, user ID. So now we now example.com has about 2,000 users. Not a breach yet, but awkward to have that revealed.) Clicking on that link takes you to a ‘welcome, your-name’ page. But wait, this looks like a pretty naive link - how did it know who we are? Surely not just by the user ID? What would happen if we change the id that was assigned to us with a different id…? Say, let’s try it with Naama’s id: <code>http://www.example.com/AfterPageLogin.aspx?msgId=4&amp;loc=1&amp;id=927</code>. (notice the 927 at the end)</p>
+<p><code>http://www.example.com/Profile.aspx?id=927&amp;name=Naama</code></p>
+
+<p>Is that the user ID exposed there in the URL? That’s already a bad sign, though not a security vulnerability quite yet. Naama is presumably user number 927 (give or take) to join this site. </p>
+
+<p>Let’s see if we can work with that… hmmm, looks like we can; here’s one example. After signing up for the site, you confirm via email and reach a link that looks like this </p>
+
+<p><code>http://www.example.com/AfterPageLogin.aspx?msgId=4&amp;loc=1&amp;id=1998</code></p>
+
+<p>(Hello again, user ID. So now we now <code>example.com</code> has about 2,000 users. Not a breach yet, but awkward to have that revealed.) Clicking on that link takes you to a ‘welcome, your-name’ page. But wait, this looks like a pretty naive link - how did it know who we are? Surely not just by the user ID? What would happen if we change the id that was assigned to us with a different id…? Say, let’s try it with Naama’s id: </p>
+
+<p><code>http://www.example.com/AfterPageLogin.aspx?msgId=4&amp;loc=1&amp;id=927</code> (notice the 927 at the end)</p>
 
 <p><img src="http://i.imgur.com/tHWcw05.png" alt="" /></p>
 
