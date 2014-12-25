@@ -16,7 +16,7 @@ The 'mini-hack' is really so trivial as to almost not qualify as a 'hack'; howev
 
 ### Nitty-Gritty and Pics
 
-The site is a minor social network. A worthy cause. On the home page we see some example users we can meet via the site - example, Naama Katan. 
+The site is a minor social network to find potential co-founders for your startup. A worthy cause. On the home page we see some example users we can meet via the site - example, Naama Katan. 
 
 ![](http://i.imgur.com/d1ZXO5k.png)
 
