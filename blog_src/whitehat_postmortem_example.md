@@ -53,3 +53,5 @@ Hey now, is that the actual password? In clear-text?? Whoa. We can now not only 
 1. If you own a site that contains sensitive data of users (foremost, passwords), you have a responsibility towards your users. Your site can suck and that's your problem, but if you are not careful you could actually compromise and hurt your users in a real way. Their money and identity could be stolen and they could get seriously hurt. It is your responsibility to make sure this doesn't happen. (See more on the subject of [responsible software](/blog/responsible_software))
 
 2. The Internet is a scary, broken place. Evil is everywhere. Watch your passwords and be careful. 
+
+Thanks for reading! Comments of any kind are welcome at **sella.rafaeli@gmail.com**.
