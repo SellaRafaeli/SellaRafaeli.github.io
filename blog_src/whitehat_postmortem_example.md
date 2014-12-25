@@ -42,7 +42,7 @@ Looks like we're in. From here, effectively we **are** Naama, so we can do whate
 
 ![](http://i.imgur.com/EXdVrzt.png)
 
-Of course, the one thing we can't do is change her password. Or can we? Let's head over to the 'Edit your profile' page. Ah, the password input is all obfuscated as dots instead of letters. That's good. But let's check the DOM element itself:
+Of course, the one thing we can't do is change her password. Or can we? Let's head over to the 'Edit your profile' page. Ah, the password input is all obfuscated as dots instead of letters. That's good. But let's check the DOM element itself (as appears in Chrome Dev Tools, on the right of this pic):
 
 ![](http://i.imgur.com/9Vy9iPq.png)
 
