@@ -30,7 +30,7 @@ Let's see if we can work with that... hmmm, looks like we can; here's one exampl
 
 `http://www.example.com/AfterPageLogin.aspx?msgId=4&loc=1&id=1998`
 
-(Hello again, user ID. So now we now `example.com` has about 2,000 users. Not a breach yet, but awkward to have that revealed.) Clicking on that link takes you to a 'welcome, your-name' page. But wait, this looks like a pretty naive link - how did it know who we are? Surely not just by the user ID? What would happen if we change the id that was assigned to us with a different id...? Say, let's try it with Naama's id: 
+(Hello again, user ID. So now we know `example.com` has about 2,000 users. Not a breach yet, but awkward to have that revealed.) Clicking on that link takes you to a 'welcome, your-name' page. But wait, this looks like a pretty naive link - how did it know who we are? Surely not just by the user ID? What would happen if we change the id that was assigned to us with a different id...? Say, let's try it with Naama's id: 
 
 `http://www.example.com/AfterPageLogin.aspx?msgId=4&loc=1&id=927` (notice the 927 at the end)
 
