@@ -142,4 +142,4 @@ JWTs are awesome. It is mostly a concept (encrypted JSONs representing client au
 
 Essentially it is a complete, working, robust authentication scheme with client-side persistence and zero I/O on server, which plays nice with any of which every single line should be comprehensible to the developer. And most importantly - it is dead simple. 
 
-- Comments? Fruit baskets? **sella.rafaeli@gmail.com**
+  Thanks for reading! Comments? Fruit baskets? **sella.rafaeli@gmail.com**

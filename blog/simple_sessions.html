@@ -129,9 +129,19 @@ get <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710
 
 <p>(You probably wouldn’t want to externalize this data, but we can see how we can retrieve the user_id.)</p>
 
-<p>As a side note we see that by going over the above code we see that attempting to <code>/enter</code> with a wrong user/pass combination will fail, but supplying a new user will signup that user/pass combination. Basically it is a complete, working, robust authentication scheme with client-side persistence and zero I/O on server, of which every single line should be comprehensible to the developer. </p>
+<p>As a side note we see that by going over the above code we see that attempting to <code>/enter</code> with a wrong user/pass combination will fail, but supplying a new user will signup that user/pass combination. </p>
 
-<ul>
-  <li><strong>sella.rafaeli@gmail.com</strong></li>
-</ul>
+<h3 id="if-not-cookies-then-what">If not cookies, then what?</h3>
+
+<p>Both when receiving JWTs from clients and when delivering the original token to the client - the same token the server expects the client to resend later - we can use multiple channels of delivery.</p>
+
+<p>All of the above <em>could</em> be implemented with cookies - that is, you could send and receive your JWT (JSON web token) within a cookie rather than request/response parameters. Indeed, JWT’s can be reasonably transported over cookies, HTTP headers, or simply within request params (querystring or post body). In fact, they can also be accepted within all three (<a href="http://en.wikipedia.org/wiki/Robustness_principle">“be liberal in what you accept from others”</a>). They should be administered to whatever the client would be expecting: often cookies when client is a browser, alternatively an explicit parameter in a response to sign-in HTTP request. Some servers may choose to respond in multiple venues (request parameters, cookies, and HTTP headers) and allow the client to choose which one he is most comfortable working with, as it will be the client’s responsiblity to persist, secure, and redeliver the token upon future requests. </p>
+
+<h2 id="summary">Summary</h2>
+
+<p>JWTs are awesome. It is mostly a concept (encrypted JSONs representing client authentication and state, persisted on client), supplemneted by concrete implementations for the en/decryption.</p>
+
+<p>Essentially it is a complete, working, robust authentication scheme with client-side persistence and zero I/O on server, which plays nice with any of which every single line should be comprehensible to the developer. And most importantly - it is dead simple. </p>
+
+<p>Thanks for reading! Comments? Fruit baskets? <strong>sella.rafaeli@gmail.com</strong></p>
 </article></body></html>
