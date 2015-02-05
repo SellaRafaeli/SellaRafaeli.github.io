@@ -14,7 +14,7 @@
 
 <p>Well, here is one solution:  </p>
 
-<div><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Hash</span>
   <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">[]</span>(key)
     value = (fetch key, <span style="color:#069">nil</span>) || (fetch key.to_s, <span style="color:#069">nil</span>) || (fetch key.to_sym, <span style="color:#069">nil</span>)     
@@ -34,7 +34,7 @@
 
 <p>What have we done here (from an API point of view)? Run this code anywhere/time in your app, and now <strong>all hashes are natively with indifferent access</strong>. Specifically, getting with [] will return the value for both string or symbol, and setting with []= will <em>replace</em> the value for both string and symbol, leaving the last set key as the exact key. So:</p>
 
-<div><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>user = {<span style="color:#606">name</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Joe</span><span style="color:#710">'</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">age</span><span style="color:#710">'</span></span> =&gt; <span style="color:#00D">20</span>} <span style="color:#777">#literal hash with both symbols and strings as keys</span>
 user[<span style="color:#A60">:name</span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Joe</span><span style="color:#710">'</span></span>  <span style="color:#777"># duh</span>
 user[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Joe</span><span style="color:#710">'</span></span> <span style="color:#777"># cool!</span>
@@ -54,7 +54,7 @@ user <span style="color:#777"># =&gt; {&quot;name&quot;=&gt;&quot;Bob&quot;, :ag
 
 <p>Since we replace the key with the last type set, this means external libraries will not be surprised:</p>
 
-<div><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>user = {<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span> =&gt; <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Joe</span><span style="color:#710">'</span></span>}
 user[<span style="color:#A60">:name</span>] = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Bill</span><span style="color:#710">'</span></span>
 user.keys.include?(<span style="color:#A60">:name</span>) <span style="color:#777"># true. Better than Hashie and ActiveSupport. However, we still grant native access using 'fetch' (actually, this is exactly the opposite of Hashie, which does support &quot;fetch&quot; but does not support .keys. )</span>
@@ -64,7 +64,7 @@ user.keys.include?(<span style="color:#A60">:name</span>) <span style="color:#77
 
 <p>We can also still use keys that are neither strings nor symbols (say, modules):</p>
 
-<div><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">module</span> <span style="color:#B06;font-weight:bold">Foo</span>
 <span style="color:#080;font-weight:bold">end</span>
 
