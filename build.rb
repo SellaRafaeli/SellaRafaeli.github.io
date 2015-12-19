@@ -15,10 +15,10 @@ def wrap_file_in_html(file_path, custom_content = nil)
                         "</head>"+
                         '<body>'+
                         '<article class="markdown-body">'+
-                        "<a href='/'>sellarafaeli.com home</a>" + 
+                        "<div class='top'><a href='/'>sellarafaeli.com - software & more</a></div>" + 
                         "#{custom_content || File.read(file_path)}"+
                         '</article>'+
-                        "</body></html>"
+                        "<footer>© sella.rafaeli@gmail.com, 2016</footer></body></html>"
    File.write(file_path,template)
 end
 

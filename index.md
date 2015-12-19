@@ -1,10 +1,13 @@
-Hey, my name is Sella Rafaeli and this is my homepage. 
+Hey, my name is Sella Rafaeli.
 
-I am into software, hiking, entrepreneurship, politics, psychology, and philosophy. 
+I am into software, hiking, entrepreneurship, backpacking, politics, psychology, and philosophy. 
 
+I live in Tel Aviv, Israel.
+
+* [about](/about)
 * [blog](/blog)
-* [about me](/about)
-* [resume (dec 14)](https://docs.google.com/document/d/1B3MohkhW5nNrnFe2ZRK6XNkntPUJ7T9cQKrT46qxqIM)
-* contact: sella.rafaeli@gmail.com.
+* [résumé](https://docs.google.com/document/d/1B3MohkhW5nNrnFe2ZRK6XNkntPUJ7T9cQKrT46qxqIM)
+* [contact](/contact)
+* [creative](/creative)
 
 <img src="http://imgur.com/NJoZJIs.jpg">

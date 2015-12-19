@@ -18,9 +18,7 @@ Later, I double-majored in Computer Science and Psychology at the Hebrew Univers
 
 - - - - 
 
-I am a software engineer by trade. Currently, a full-stack web developer. JavaScript and Ruby (and English) are my weapons of choice, the MEAN stack is my favorite, and I am an evangelist of rapid prototyping, NoSQL, and dynamic typing. 
-
-These days (summer of 2014) I am thinking of what exciting software projects I can lead. 
+As of the beginning of 2016, I am the CTO of [https://yes.no](yes.no), a crowd-interviewing platform. 
 
 If you are interested, don't be shy, drop me a line. :) 
 

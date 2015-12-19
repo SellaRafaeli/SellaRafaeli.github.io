@@ -1,8 +1,18 @@
+.top, footer {  
+  text-align: center;
+  margin-bottom: 30px;
+}
+.top a { 
+  /*background-color: black;
+  color: white !important;*/
+  padding: 10px;
+  text-decoration: underline;
+}
+
 .markdown-body {
         min-width: 200px;
         max-width: 790px;
         margin: 0 auto;
-        padding: 30px;
         font-size: 15px;
 }
 
