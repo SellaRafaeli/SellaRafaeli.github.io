@@ -3,14 +3,19 @@ require 'find'
 require 'kramdown'
 
 def wrap_file_in_html(file_path, custom_content = nil)     
-   template = "<html><head> <meta charset='utf-8'> <title>#{File.basename(file_path, ".html")} </title>"+
+   basename = File.basename(file_path, ".html")
+   basename = 'sellarafaeli.com' if basename == 'index'
+   template = "<html><head> <meta charset='utf-8'> <title>#{basename}</title>"+
+                        '<link rel="shortcut icon" href="/favicon_h.ico"/>'+
                         #'<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>'+
-                        '<link href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css" rel="stylesheet"></link>'+
-                        '<link href="/main.css" rel="stylesheet"></link>'+
+                        # '<link href="/css/github_markdown.css" rel="stylesheet"></link>'+
+                        '<link href="/css/main.css" rel="stylesheet"></link>'+
+                        # '<link href="/css/swiss.css" rel="stylesheet"></link>'+
+                        '<link href="/css/markdown.css" rel="stylesheet"></link>'+
                         "</head>"+
                         '<body>'+
                         '<article class="markdown-body">'+
-                        "<a href='/'>Home</a>" + "  |  " +
+                        "<a href='/'>sellarafaeli.com home</a>" + 
                         "#{custom_content || File.read(file_path)}"+
                         '</article>'+
                         "</body></html>"

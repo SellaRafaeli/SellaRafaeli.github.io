@@ -1,0 +1,13 @@
+.markdown-body {
+        min-width: 200px;
+        max-width: 790px;
+        margin: 0 auto;
+        padding: 30px;
+        font-size: 15px;
+}
+
+.created_at {
+    float: right;
+    text-align: right;
+    font-size: 90%;
+}
