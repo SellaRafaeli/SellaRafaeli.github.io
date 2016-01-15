@@ -8,10 +8,11 @@ def wrap_file_in_html(file_path, custom_content = nil)
    template = "<html><head> <meta charset='utf-8'> <title>#{basename}</title>"+
                         '<link rel="shortcut icon" href="/favicon_h.ico"/>'+
                         #'<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>'+
-                        # '<link href="/css/github_markdown.css" rel="stylesheet"></link>'+
+                        #'<link href="/css/github_markdown.css" rel="stylesheet"></link>'+
                         '<link href="/css/main.css" rel="stylesheet"></link>'+
+                        '<link href="/css/mobile.css" rel="stylesheet" media="handheld">'+
                         # '<link href="/css/swiss.css" rel="stylesheet"></link>'+
-                        '<link href="/css/markdown.css" rel="stylesheet"></link>'+
+                        #'<link href="/css/markdown.css" rel="stylesheet"></link>'+
                         "</head>"+
                         '<body>'+
                         '<article class="markdown-body">'+
