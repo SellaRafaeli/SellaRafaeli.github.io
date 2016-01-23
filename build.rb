@@ -6,11 +6,12 @@ def wrap_file_in_html(file_path, custom_content = nil)
    basename = File.basename(file_path, ".html")
    basename = 'sellarafaeli.com' if basename == 'index'
    template = "<html><head> <meta charset='utf-8'> <title>#{basename}</title>"+
+                        '<meta name="viewport" content="width=device-width">'+
                         '<link rel="shortcut icon" href="/favicon_h.ico"/>'+
                         #'<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>'+
                         #'<link href="/css/github_markdown.css" rel="stylesheet"></link>'+
                         #'<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">'+
-                        '<link href="/css/main.css" rel="stylesheet"></link>'+
+                        #'<link href="/css/main.css" rel="stylesheet"></link>'+
                         #'<link href="/css/mobile.css" rel="stylesheet" media="handheld">'+
                         # '<link href="/css/swiss.css" rel="stylesheet"></link>'+
                         #'<link href="/css/markdown.css" rel="stylesheet"></link>'+
