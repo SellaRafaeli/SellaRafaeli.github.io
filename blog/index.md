@@ -1,7 +1,8 @@
 ## Sella's Blog 
 <!-- this file is auto-created. -->
 
-###### now that's what I'm talking about
+(now that's what I'm talking about)
+
 * [simple_sessions](simple_sessions.html)<span class='created_at'>2015-02-05</span>
 * [whitehat_postmortem_example](whitehat_postmortem_example.html)<span class='created_at'>2014-12-25</span>
 * [how_to_recruit_software_engineers](how_to_recruit_software_engineers.html)<span class='created_at'>2014-12-15</span>
