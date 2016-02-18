@@ -4,7 +4,7 @@ I really enjoy writing software. Good software developers often have a lot to sa
 
 However, I will ramble elsewhere, and here I will attempt to provide a brief description of my own experience, on the assumption that the reader (that's you) is interested in that.
 
-* 03-08 - I was a software Product Manager at 8200 (IDF). My two biggest projects was a knowledge management tool and an in-house BI tool. Both were pretty awesome. I still have a soft spot for knowledge management and BI tools. 
+* 2003-2008 - I was a software Product Manager at 8200 (IDF). My two biggest projects was a knowledge management tool and an in-house BI tool. Both were pretty awesome. I still have a soft spot for knowledge management and BI tools. 
 
 * I studied Computer Science at the Hebrew University of Jerusalem. Double-majored in Psychology. Finished on Dean's List. My favorite CS topics are computability (Halting Problem, P-vs-NP). Realizing there are some things that are just **incomputable** really expands your mind. 
 
@@ -12,7 +12,7 @@ However, I will ramble elsewhere, and here I will attempt to provide a brief des
 
 * After graduating, I left Jerusalem to work as a **front-end dev** at a security firm. This was in early 2013, in the beginning of the JS SPA revolution (soon to be known as "JS Framework Fatigue"). Backbone was in vogue; Knockout, Knockback, Angular. React was soon to come out. Silverlight and Flash were just being quietly taken out back and shot. I still have a **"I<3JS"** t-shirt and wear it proudly. 
 
-* Later, I found myself at **Fiverr, where I really made my bones**. Ruby, Rails, Sinatra, Microservices, DBs, Queues. My first year was on the team in charging of the order flow and the banking system; that was a lot of 3am wake-up calls and white hairs. **When the actual business model is down, you better believe you're getting up and fixing it.** And then you're learning how to make sure you won't need to be woken up again the next time. I also learned to love Ruby, which is by far my favorite language today. If you actually need to get anything done (this includes maintenance), **nothing beats the productivity and sheer joy of doing in Ruby**. 
+* Later, I found myself at **Fiverr, where I really made my bones**. Ruby, Rails, Sinatra, Microservices, DBs, Queues. Mostly a backend dev, my first year was on the team in charging of the order flow and the banking system; that was a lot of 3am wake-up calls and white hairs. **When the actual business model is down, you better believe you're getting up and fixing it.** And then you're learning how to make sure you won't need to be woken up again the next time. I also learned to love Ruby, which is by far my favorite language today. If you actually need to get anything done (this includes maintenance), **nothing beats the productivity and sheer joy of doing in Ruby**. 
 
 * After leaving Fiverr I did some freelance work, mostly backend APIs as well as NodeJS and Angular. It was during this period that I learned to really appreciate the awesomeness and expressiveness of **Ruby (on Sinatra) over Mongo, running on PAAS like Heroku**. I am a very fast developer in general, but using the above stack just felt like I was on a jet plane. Nothing took any time, it was amazing. There was no "but... it hurt later to maintain/performance-tune/whatever". It was just amazing. It still is. Blows Rails/Node/AWS/Microservices/SQL out of the water. As of today, THAT is my choice of stack for any e-commerce/social app. 
 
