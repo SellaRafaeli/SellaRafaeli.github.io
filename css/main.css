@@ -25,4 +25,6 @@ background:#fefefe;
 
 p{ margin:1em 0; }
 
-img{ max-width:100%; }
+img{ max-width:100%;  }
+
+figcaption { text-align: center; font-size: 80%;}
