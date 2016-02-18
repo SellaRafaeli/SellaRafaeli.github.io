@@ -1,5 +1,8 @@
 I hike a lot. I mean... a lot. Here are some recent (early 2016) pictures of me hiking.
 
+<img src="http://imgur.com/jykJ12i.jpg">
+<figcaption>Har Tayasim, Israel, Feb 2016</figcaption>
+
 <img src="http://imgur.com/8K61o4O.jpg">
 <figcaption>The Small Crater, Israel, Feb 2016</figcaption>
 
