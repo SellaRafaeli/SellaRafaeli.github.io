@@ -5,7 +5,7 @@ I am into [software](/software), [hiking](/hiking), [backpacking](/backpacking),
 I live in Tel Aviv, Israel.
 
 * [about](/about.html)
-* [blog](/blog)
+* [writings](/blog)
 * [résumé](https://docs.google.com/document/d/1B3MohkhW5nNrnFe2ZRK6XNkntPUJ7T9cQKrT46qxqIM)
 * [contact](/contact.html)
 * [creative](/creative.html)
