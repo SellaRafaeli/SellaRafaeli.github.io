@@ -1,4 +1,4 @@
-I am interested in the concept of building a **BaaS (backend-as-a-service) platform**, where one could easily create, configure and manage a backend for their mobile/web apps, without having to write code or manage any platform. A "Wix for Backends", if you will. 
+I am interested in the concept of building a **BaaS (backend-as-a-service) platform**, where one could easily create, configure and manage a backend for their mobile/web apps, without having to write code or manage any platform. A "Wix for Backends", if you will.
 
 ### Abstraction is Good 
 
