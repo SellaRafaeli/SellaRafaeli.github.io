@@ -29,18 +29,43 @@
 
 <h3 id="business-model--differentiation">Business Model &amp; Differentiation</h3>
 
-<p>The market is big enough for multiple BaaS offerers (similarly to the Iaas/PaaS space), but variations in the market/product could help set aside a competing product.</p>
+<p>The market is big enough for multiple BaaS offerers (similarly to the Iaas/PaaS space), but variations in the market/product could help set aside a competing product and offer a unique market value.</p>
 
-<p>Here are some of the possible flavours of a BaaS offerer (non-mutually-exclusive):</p>
+<h4 id="main-baas-pain-points">Main Baas Pain Points</h4>
 
 <ol>
-  <li><strong>Hosted BaaS</strong>. This is the classic, prevalent model of all of the above.</li>
-  <li><strong>Open Source</strong> it. Similarly to Wordpress.com/.org model: you can either host it yourself, or use our paid hosting. This benefits from potential community investment in dev.</li>
-  <li><strong>Backend-as-a-product</strong>, where the end result is your own running BE over Heroku over AWS, giving the customer a running BE they can extend-modify-control, prevening the danger of lock-in and allowing total customization.</li>
-  <li><strong>Humans</strong> - instead of a pure SaaS, let (our) humans configure the BE for you. These humans can be CMS-operators rather than the senior BE devs you would need to build an API from scratch.</li>
+  <li><strong>Complex</strong>: It’s still a bitch to set it up.</li>
+  <li><strong>Unextendable</strong>: If it’s successful and you grow, it’s hard to customize it; specifically it’s quite hard to add customizable BL.</li>
+  <li><strong>Dangerous</strong>: You’re locked-in and FB buy the BaaS and then shut them down, you’re fucked.</li>
 </ol>
 
-<p>These are flavours and differentiation which merit more discussion, but the core product is the same - building an abstract BE generator, and a tool to allow humans to instantiate it.</p>
+<h4 id="ideal-solution-from-a-customers-perspective">Ideal Solution from a Customer’s Perspective</h4>
+
+<ol>
+  <li><strong>Easy</strong>: I (the customer) want to either speak with a human or use a GUI interface to configure my BE.</li>
+  <li><strong>Fully Accessible</strong>: I want be able to get direct access to my BE (code and data), and to be able to modify it as I see fit.</li>
+  <li><strong>Risk-Free</strong>: I want to be able to leave the BaaS provider and take my BE with me, using my own dev-power to maintain it.</li>
+</ol>
+
+<p>#1 is a compromise between a SaaS and a services company, and in fact can be two separate sells using the same technology (i.e., sell your services but use this stack to cut costs by an order of magnitude). If you use the correct abstractions, the tech support of today are the generic developers of tomorrow - we seen this trend happen with Wordpress/Wix “website” freelancers.</p>
+
+<p>#2&amp;3 present a slight variance on the traditional BaaS solution; it is halfway between BaaS and “backend-as-a-product”.</p>
+
+<h4 id="proposed-implementation">Proposed Implementation</h4>
+
+<ol>
+  <li>Use non-devs for the ‘human’ aspect of #1. Contact a human tech support will build your app for you.</li>
+  <li><strong>Run each BE independently on some existing PaaS (e.g. Heroku)</strong>,</li>
+  <li>By running a user’s BE on Heroku, we can allow the user to inject arbitrary code, as their code will be contained within their own process). This is more than just an injected callback; we can give the user partial or complete access to their BE process’s code and let them go nuts with it if they really want to.</li>
+  <li>Now that the user’s BE is on Heroku, we can also give a complete hand-off and transfer control of the app to the user at any time, giving them completely responsibility and ownership. No danger of lock-in, you can always take your business and data and keep going yourself.</li>
+</ol>
+
+<p>Notes:</p>
+
+<ol>
+  <li>Handing off the code to a running BE is not a big step away from having that code exist as a (licensed) open source code. So that’s good.</li>
+  <li>PaaS’s are expensive. A production-ready app on Heroku should cost no less than about 100 USD(!) a month just to run it (web process, background worker, cron job, DB). Perhaps users should be presented with the option running in a ‘shared’ context, with an option to migrate their BE out later. (This is reminiscent of ‘migrating from Heroku to AWS’ stories).</li>
+</ol>
 
 <h3 id="me">Me</h3>
 
