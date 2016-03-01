@@ -33,7 +33,7 @@ The market is big enough for multiple BaaS offerers (similarly to the Iaas/PaaS 
 
 1. **Complex**: It's still a bitch to set it up. 
 2. **Unextendable**: If it's successful and you grow, it's hard to customize it; specifically it's quite hard to add customizable BL.
-3. **Dangerous**: You're locked-in and FB buy the BaaS and then shut them down, you're fucked. 
+3. **Dangerous**: You're locked-in; if the BaaS shut down - you're fucked. 
 
 #### Ideal Solution from a Customer's Perspective 
 
@@ -57,6 +57,13 @@ Notes:
 1. Handing off the code to a running BE is not a big step away from having that code exist as a (licensed) open source code. So that's good.
 2. PaaS's are expensive. A production-ready app on Heroku should cost no less than about 100 USD(!) a month just to run it (web process, background worker, cron job, DB). Perhaps users should be presented with the option running in a 'shared' context, with an option to migrate their BE out later. (This is reminiscent of 'migrating from Heroku to AWS' stories). 
 
+#### Differentiation Summary
+
+1. **Basic**: same BaaS as other companies (but better, of course!) (free, paid at scale)
+2. **Humans** will build/modify it for you. (paid)
+3. Optionally run it as a **separate process (still managed by us)**, granting you the ability to inject arbitrary custom code. `rm -rf *` or `while(true)` it if you feel like it. (paid)
+4. Optionally, get **complete ownership of your BE**, giving you full and complete control of your new BE. Bid the BaaS farewell and grow your empire. (paid)
+
 ### Me
 
-If you are reading this, you probably know me - Sella Rafaeli. If you have constructive feedback or think you would be interested in such a project, hit me up. Let's build the next BaaS. :)
+If you are reading this, you probably know me - Sella Rafaeli. If you have constructive feedback or think you would be interested in such a project, hit me up.
