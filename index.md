@@ -1,6 +1,6 @@
 Hey, my name is Sella Rafaeli.
 
-I am into [software](/software), [hiking](/hiking), [backpacking](/backpacking), [psychology](/psychology), [spirituality](/spirituality), and [languages](/languages). 
+I am into [software](/software), [hiking](/hiking), [psychology](/psychology), [spirituality](/spirituality), and [languages](/languages). 
 
 I live in Tel Aviv, Israel.
 
