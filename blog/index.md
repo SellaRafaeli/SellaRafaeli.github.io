@@ -3,6 +3,7 @@
 
 (now that's what I'm talking about)
 
+* [SNM - Social Network / Marketplace as a service/product](baas.html)
 * [BaaS - Backend-as-a-Service](baas.html)
 * [Programming is the New Literacy](https://medium.com/@sellarafaeli/programming-is-the-new-literacy-4a0319abe726)
 * [yes.no — the architecture of a social network startup in 2016](https://medium.com/@sellarafaeli/yes-no-architecture-of-a-social-network-startup-in-2016-d6d2989ca1b3)
