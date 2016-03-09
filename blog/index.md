@@ -3,6 +3,7 @@
 
 (now that's what I'm talking about)
 
+* [Ruby + MongoDB MapReduce - Dynamically Find All Keys in Collection](ruby_mongodb_mapreduce_all_keys_in_collection.html)
 * [SNM - Social Network / Marketplace as a service/product](snm_as_a_service_product.html)
 * [BaaS - Backend-as-a-Service](baas.html)
 * [Programming is the New Literacy](https://medium.com/@sellarafaeli/programming-is-the-new-literacy-4a0319abe726)
