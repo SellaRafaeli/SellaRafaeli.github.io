@@ -3,6 +3,7 @@
 
 (now that's what I'm talking about)
 
+* [Sensitive Female Software Engineers Considered Harmful](https://medium.com/@sellarafaeli/sensitive-female-engineers-considered-harmful-faa91a193d92#.p8jaost2u)
 * [Ruby + MongoDB MapReduce - Dynamically Find All Keys in Collection](ruby_mongodb_mapreduce_all_keys_in_collection.html)
 * [SNM - Social Network / Marketplace as a service/product](snm_as_a_service_product.html)
 * [BaaS - Backend-as-a-Service](baas.html)
