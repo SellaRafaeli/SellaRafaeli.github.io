@@ -3,6 +3,7 @@
 
 (now that's what I'm talking about)
 
+* [Spreadsheet As An Admin DB Interface](https://medium.com/@sellarafaeli/just-use-a-spreadsheet-spreadsheet-as-an-admin-interface-2ed789a93118#.ksiiq89t2)
 * [Sensitive Female Software Engineers Considered Harmful](https://medium.com/@sellarafaeli/sensitive-female-engineers-considered-harmful-faa91a193d92#.p8jaost2u)
 * [Ruby + MongoDB MapReduce - Dynamically Find All Keys in Collection](ruby_mongodb_mapreduce_all_keys_in_collection.html)
 * [SNM - Social Network / Marketplace as a service/product](snm_as_a_service_product.html)
