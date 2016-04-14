@@ -4,7 +4,7 @@ The following is a list of good posts on various subjects.
   "Education is not filling a bucket, but lighting a fire." - W. B. Yeats
 </blockquote>
 
-### Hiring 
+### Hiring
 
 * [http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html](http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html)
 *Hire people who are 'smart and get things done.*
@@ -16,6 +16,10 @@ The following is a list of good posts on various subjects.
 
 * [http://javascript.crockford.com/javascript.html](http://javascript.crockford.com/javascript.html) 
 *JavaScript: The World's Most Misunderstood Programming Language.*
+
+### Programmers 
+
+* [http://www.joelonsoftware.com/articles/HighNotes.html](http://www.joelonsoftware.com/articles/HighNotes.html) 
 
 ### Rants
 
