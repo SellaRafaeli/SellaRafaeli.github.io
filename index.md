@@ -2,7 +2,7 @@ Hey, my name is Sella Rafaeli.
 
 I am into [software](/software), [hiking](/hiking), [psychology](/psychology), [spirituality](/spirituality), and [languages](/languages). 
 
-I live in Tel Aviv, Israel.
+I am an American-Israeli, currently living in Tel Aviv, Israel.
 
 * [about](/about.html)
 * [writings](/blog)
