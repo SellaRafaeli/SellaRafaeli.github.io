@@ -3,6 +3,7 @@
 
 (now that's what I'm talking about)
 
+* [MongoDB Joins with simple Ruby](https://medium.com/@sellarafaeli/mongo-joins-across-collections-with-ruby-504e3351d278#.qnh1yzjfk)
 * [Spreadsheet As An Admin DB Interface](https://medium.com/@sellarafaeli/just-use-a-spreadsheet-spreadsheet-as-an-admin-interface-2ed789a93118#.ksiiq89t2)
 * [Sensitive Female Software Engineers Considered Harmful](https://medium.com/@sellarafaeli/sensitive-female-engineers-considered-harmful-faa91a193d92#.p8jaost2u)
 * [Ruby + MongoDB MapReduce - Dynamically Find All Keys in Collection](ruby_mongodb_mapreduce_all_keys_in_collection.html)
