@@ -17,8 +17,8 @@ def wrap_file_in_html(file_path, custom_content = nil)
                         #'<link href="/css/markdown.css" rel="stylesheet"></link>'+
                         "</head>"+
                         '<body>'+
-                        '<article class="markdown-body">'+
-                       # "<div class='top'><a href='/'>sellarafaeli.com - software & more</a></div>" + 
+                        "<div class='top'><a href='/'>sellarafaeli.com</a></div>" + 
+                        '<article class="markdown-body">'+                       
                         "#{custom_content || File.read(file_path)}"+
                         '</article>'+
                         "<footer><a href='/'>© sellarafaeli.com, 2016</a></footer></body></html>"

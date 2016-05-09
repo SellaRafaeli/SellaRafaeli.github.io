@@ -3,6 +3,7 @@
 
 (now that's what I'm talking about)
 
+* [Secure simple sign-in links](simple_secure_sign_in_links.html)
 * [No more username/passwords: Just use a 3rd party for authentication.](https://medium.com/@sellarafaeli/no-more-username-passwords-just-use-a-3rd-party-for-authentication-59b12db092a4)
 * [MongoDB Joins with simple Ruby](https://medium.com/@sellarafaeli/mongo-joins-across-collections-with-ruby-504e3351d278#.qnh1yzjfk)
 * [Spreadsheet As An Admin DB Interface](https://medium.com/@sellarafaeli/just-use-a-spreadsheet-spreadsheet-as-an-admin-interface-2ed789a93118#.ksiiq89t2)

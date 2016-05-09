@@ -1,0 +1,67 @@
+<html><head> <meta charset='utf-8'> <title>simple_secure_sign_in_links</title><meta name="viewport" content="width=device-width"><link rel="shortcut icon" href="/favicon_thumb.ico"/><link href="/css/main.css" rel="stylesheet"></link></head><body><div class='top'><a href='/'>sellarafaeli.com</a></div><article class="markdown-body"><h1 id="simple-secure-sign-in-links">Simple, Secure Sign-In Links</h1>
+
+<p>We previously explored why <a href="https://medium.com/@sellarafaeli/no-more-username-passwords-just-use-a-3rd-party-for-authentication-59b12db092a4#.4hapiv7p7">you should use only a 3rd-party authentication</a>.</p>
+
+<p>Let’s see how dead-simple and robust this would be by constructing an email sign-in link.</p>
+
+<p>Remember, our use case is:</p>
+
+<ol>
+  <li>User wants to login.</li>
+  <li>We email user a link.</li>
+  <li>User clicks the link.</li>
+  <li>We verify this link was recently created by us for this email.</li>
+</ol>
+
+<p>Of course it must be secure and simple.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre>require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">json</span><span style="color:#710">'</span></span>; require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">digest</span><span style="color:#710">'</span></span>; require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">date</span><span style="color:#710">'</span></span>;
+<span style="color:#777"># APP_SECRET = 'my_secret'</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">generate_link</span>(email) 
+  time  = <span style="color:#036;font-weight:bold">Time</span>.now.strftime(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%Y-%m-%d</span><span style="color:#710">&quot;</span></span>)
+  token = <span style="color:#036;font-weight:bold">Digest</span>::<span style="color:#036;font-weight:bold">SHA256</span>.base64digest(email + time + <span style="color:#036;font-weight:bold">APP_SECRET</span>)
+  link  = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">http://app.com/token_login?email=</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>email<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">&amp;time=</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>time<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">&amp;token=</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>token<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+  <span style="color:#777"># send link to email. </span>
+<span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">check_token</span>(data)
+  email, time, token   = data[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">email</span><span style="color:#710">'</span></span>], data[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">time</span><span style="color:#710">'</span></span>], data[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">token</span><span style="color:#710">'</span></span>]  
+  real_token           = <span style="color:#036;font-weight:bold">Digest</span>::<span style="color:#036;font-weight:bold">SHA256</span>.base64digest(email + time + <span style="color:#036;font-weight:bold">APP_SECRET</span>)
+  within_7_days        = <span style="color:#036;font-weight:bold">Date</span>.parse(time) &gt; <span style="color:#036;font-weight:bold">Date</span>.today - <span style="color:#00D">7</span> 
+  (token == real_token) &amp;&amp; within_7_days &amp;&amp; email
+<span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#777"># http://app.com/token_login?email=foo@bar.com&amp;time=2016-05-09&amp;token=2/7/FKubqJKOzzfECwkEESQ00VwngcrB3GGpJrnGcGI=</span>
+get <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">/token_login</span><span style="color:#710">'</span></span> <span style="color:#080;font-weight:bold">do</span>
+  email = check_token(params) <span style="color:#777"># email is now an authenticated user, or 'false'.</span>
+<span style="color:#080;font-weight:bold">end</span>
+</pre></div>
+</div>
+</div>
+
+<p>The implementation is:</p>
+
+<ol>
+  <li>
+    <p>We generate a link for the email. The result should be a link including both the parameters and the hash: <br />
+<code>http://app.com/token_login?email=foo@bar.com&amp;time=2016-05-09&amp;token=2/7/FKubqJKOzzfECwkEESQ00VwngcrB3GGpJrnGcGI=</code>. <br />
+Note the email and time are exposed in the URL, but that’s OK.</p>
+  </li>
+  <li>
+    <p>When user clicks on the link, we check the the token is indeed a hash of the email and time and our app secret. Note that since only we have the app secret, it can’t be forged. A user could forge the time/email, but then then token would not be a correct hash. This method also allows us to expire the token after a set amount of time.</p>
+  </li>
+  <li>
+    <p>If the token is indeed a hash of the email, time, and our secret - we know this is a valid link for this email.</p>
+  </li>
+</ol>
+
+<p>Notes:</p>
+
+<p>a. We can add additional parameters to the token hash, if we need to.</p>
+
+<p>b. The above does not ensure tokens are used only once. If that is desired, a persistence mechanism must be added, e.g. saving tokens via Redis to make sure they are not used more than once.)</p>
+
+<p>So as we can see - it’s dead-simple. You can easily craft a secure sign-in link, and by mailing it, the recipient can prove they own that email.</p>
+</article><footer><a href='/'>© sellarafaeli.com, 2016</a></footer></body></html>

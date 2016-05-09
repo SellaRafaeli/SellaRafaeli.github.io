@@ -1,7 +1,7 @@
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-.top, footer { text-align: center; margin-bottom: 30px; }
-.top a { padding: 10px; text-decoration: underline; }
+footer { text-align: center; margin-bottom: 30px; }
+.top a { text-align: left; text-decoration: underline; }
 
 .created_at {
     margin-left: 10px;
@@ -17,12 +17,20 @@ color:#444;
 font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 line-height:1.5em;
 padding:1em;
-font-size: 16px;
+font-size: 17px;
+font-weight: lighter;
 margin:auto;
 max-width:40em;
 margin: 0 auto;        
 margin:0 auto;
 background:#fefefe;
+}
+
+.highlighter-coderay {
+  background-color: whitesmoke;
+  overflow: scroll;
+  font-size: 14px;
+  padding-left: 10px;
 }
 
 p{ margin:1em 0; }
