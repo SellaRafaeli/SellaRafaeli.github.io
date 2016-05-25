@@ -4,7 +4,7 @@
 
 <p><strong>JabJS</strong> allows you to bind any JavaScript model to any DOM element using the following idiomatic format:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>jab.bind(model, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">property</span><span style="color:#710">'</span></span>, domElement[s]);
 </pre></div>
 </div>
@@ -12,7 +12,7 @@
 
 <p>Example:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>user = {<span style="color:#606">name</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">John Lennon</span><span style="color:#710">'</span></span>}; <span style="color:#777">//any JavaScript object</span>
 jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>, document.getElementByid(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">input</span><span style="color:#710">'</span></span>)); <span style="color:#777">//user is now binded (two-way) with #input</span>
 </pre></div>
@@ -25,7 +25,7 @@ jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style=
 <h4 id="bind-to-element">Bind To Element</h4>
 <p>Suppose you have an HTML element <code>&lt;div id="div"&gt;&lt;/div&gt;</code> and a POJS (plain old JavaScript object)</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>user = {<span style="color:#606">name</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">John Lennon</span><span style="color:#710">'</span></span>}
 </pre></div>
 </div>
@@ -33,7 +33,7 @@ jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style=
 
 <p>After including JabJS, to bind the object to the element you would run:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>, document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">div</span><span style="color:#710">'</span></span>));
 </pre></div>
 </div>
@@ -46,7 +46,7 @@ jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style=
 
 <p>JabJS immediately performs two-way data-bindings on appropriate HTML elements, so suppose you have an HTML element <code>&lt;input id="input"&gt;</code> and a JavaScript object <code>user = {name: 'John Lennon'}</code>. After including JabJS, to bind the object to the input you would run the same idiomatic JabJS binding:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>, document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">input</span><span style="color:#710">'</span></span>));
 </pre></div>
 </div>
@@ -57,7 +57,7 @@ jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style=
 <h4 id="three-way-binding-multiple-elements">Three-Way Binding (Multiple Elements)</h4>
 <p>JabJS supports binding to multiple elements, enabling three-way (actually, <em>n</em>-way) changes between the model and each of the binded models. This is achieved using the idiomatic syntax, supplying an array of elements rather than a singular element.</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>, [document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">input</span><span style="color:#710">'</span></span>), document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">textarea</span><span style="color:#710">'</span></span>), document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">div</span><span style="color:#710">'</span></span>)]);
 </pre></div>
 </div>
@@ -68,7 +68,7 @@ jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style=
 <h4 id="select-checkbox">Select, Checkbox</h4>
 <p>Usage is as follows (assuming a <code>select</code> and <code>checkbox</code> elements with those Ids):</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>user = {selectIndex=<span style="color:#00D">0</span>; checked=<span style="color:#069">false</span>};
 jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">selectIndex</span><span style="color:#710">'</span></span>, document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">select</span><span style="color:#710">'</span></span>));
 jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">checked</span><span style="color:#710">'</span></span>, document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">checkbox</span><span style="color:#710">'</span></span>));
@@ -79,7 +79,7 @@ jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style=
 <h4 id="special-bindings">Special Bindings</h4>
 <p>By default, JabJS binds by value. In our examples, <code>user.name</code>’s value is input as the element’s appropriate value. These are binded by using the following syntax (note the new fourth parameter):</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>jab.bind(model, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">property</span><span style="color:#710">'</span></span>, domElem, {<span style="color:#606">opts</span>: bindingName})
 </pre></div>
 </div>
@@ -87,7 +87,7 @@ jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style=
 
 <p>or</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>jab.bind(model, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">property</span><span style="color:#710">'</span></span>, domElem, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">bindingName</span><span style="color:#710">'</span></span>)
 </pre></div>
 </div>
@@ -104,7 +104,7 @@ jab.bind(user, 'name', document.getElementById('input'), 'show')
 
 <p>Another default special binding is the <code>click</code> binding, which adds the value as an ‘onclick’ handler to the binded elements. Notice this requires the <code>value</code> to be a <strong>function</strong>.</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#06B;font-weight:bold">alertClicked</span> = <span style="color:#080;font-weight:bold">function</span>(){ alert(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">clicked</span><span style="color:#710">'</span></span>) };
 user.clickHandler = alertClicked;
 jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">clickHandler</span><span style="color:#710">'</span></span>, document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">input</span><span style="color:#710">'</span></span>), {<span style="color:#606">func</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">click</span><span style="color:#710">'</span></span>});
@@ -115,7 +115,7 @@ jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style=
 <h4 id="custom-bindings">Custom Bindings</h4>
 <p>Adding your own binding is as easy as pie, using the following pattern:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#06B;font-weight:bold">myFunc</span> = <span style="color:#080;font-weight:bold">function</span>(elem, value) {
   <span style="color:#777">//do something with element and value</span>
 };
@@ -128,7 +128,7 @@ jab.bind(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style=
 
 <p>Let’s observe a concrete example:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#06B;font-weight:bold">setBorderWidth</span> = <span style="color:#080;font-weight:bold">function</span>(elem, value) {
   elem.style.borderWidth = value+<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">px</span><span style="color:#710">'</span></span>;
 };
@@ -143,7 +143,7 @@ jab.bind(borderData, <span style="background-color:hsla(0,100%,50%,0.05)"><span 
 <h4 id="binding-sub-elements">Binding sub-elements</h4>
 <p>If your model is</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>user = {<span style="color:#606">details</span>: {<span style="color:#606">name</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Abraham</span><span style="color:#710">'</span></span>, <span style="color:#606">age</span>: <span style="color:#00D">900</span>}};
 </pre></div>
 </div>
@@ -158,7 +158,7 @@ jab.bind(user.details, 'name', document.getElementById('input'));
 
 <p>After-hooks are used by JabJS by supplying an <code>afterHook</code> callback function to the <code>opts</code> parameter. This callback function is called whenever the element is updated. The function is given the element’s new value, but that’s often not needed. For example:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>car = {<span style="color:#606">speed</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">10</span><span style="color:#710">&quot;</span></span>, <span style="color:#606">time</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">3</span><span style="color:#710">&quot;</span></span>};
 <span style="color:#06B;font-weight:bold">computeDistance</span> = <span style="color:#080;font-weight:bold">function</span>(){ car.distance = car.speed * car.time; };
 jab.bind(car, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">speed</span><span style="color:#710">'</span></span>, document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">input</span><span style="color:#710">'</span></span>), {<span style="color:#606">afterHook</span>: computeDistance} ); <span style="color:#777">//#input.value == 10</span>
@@ -176,7 +176,7 @@ car.speed = <span style="color:#00D">20</span> <span style="color:#777">//#input
 
 <p>Binding pure JS vars is done with the following syntax: <code>jab.bindVar(model, property/ies, callback)</code>. For example:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>man = {<span style="color:#606">firstName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Bill</span><span style="color:#710">'</span></span>, <span style="color:#606">lastName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Clinton</span><span style="color:#710">'</span></span>, <span style="color:#606">fullName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#710">'</span></span>};
 jab.bindVar(man, [<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">firstName</span><span style="color:#710">'</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">lastName</span><span style="color:#710">'</span></span>], <span style="color:#080;font-weight:bold">function</span>() { man.fullName = man.firstName + <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> </span><span style="color:#710">&quot;</span></span> +man.lastName } ); <span style="color:#777">//whenever firstName or lastName change, fullName will also change...</span>
 jab.bind(man, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">fullName</span><span style="color:#710">'</span></span>, div); <span style="color:#777">//...and so will its binded view. </span>

@@ -15,7 +15,7 @@
 
 <p>Of course it must be secure and simple.</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">json</span><span style="color:#710">'</span></span>; require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">digest</span><span style="color:#710">'</span></span>; require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">date</span><span style="color:#710">'</span></span>;
 <span style="color:#777"># APP_SECRET = 'my_secret'</span>
 
@@ -50,7 +50,7 @@ get <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710
 Note the email and time are exposed in the URL, but that’s OK.</p>
   </li>
   <li>
-    <p>When user clicks on the link, we check the the token is indeed a hash of the email and time and our app secret. Note that since only we have the app secret, it can’t be forged. A user could forge the time/email, but then then token would not be a correct hash. This method also allows us to expire the token after a set amount of time.</p>
+    <p>When user clicks on the link, we check the the token is indeed a hash of the email and time and our app secret. Since only we have the app secret, it can’t be forged. A user could forge the time/email, but then then token would not be a correct hash. This method also allows us to expire the token after a set amount of time.</p>
   </li>
   <li>
     <p>If the token is indeed a hash of the email, time, and our secret - we know this is a valid link for this email.</p>
