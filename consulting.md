@@ -13,7 +13,7 @@ I am relatively expensive for a single individual, and this is because:
 * I am very experienced in this field. 
 * If desired, I do the entire full-stack development myself (I take care of everything personally).
 
-I am ex-8200, ex-HUJI, and and ex-Fiverr. You can read more [about me](/about), about my [software experience](/software) or just [contact](/contact) me with any question or to ask for referrals. 
+You can read more [about me](/about), about my [software experience](/software) or just [contact](/contact) me with any question or to ask for referrals. 
 
 Happy hacking! :)
 
