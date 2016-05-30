@@ -1,6 +1,6 @@
 Hey, my name is Sella Rafaeli. 
 
-I'm a [Ruby, JavaScript, and Full-Stack consultant](/consulting). 
+I'm a Ruby, JavaScript, and Full-Stack [consultant](/consulting). 
 
 I am an American-Israeli, and I work primarily out of San Francisco, New York, Boston, London, and Tel Aviv. 
 
