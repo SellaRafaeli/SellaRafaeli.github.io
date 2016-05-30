@@ -2,7 +2,7 @@
 
 I really enjoy writing software. Good software developers often have a lot to say about the subject, and I usually have a lot to say about everything. 
 
-However, I will ramble elsewhere, and here I will attempt to provide a brief description of my own experience, on the assumption that the reader (that's you) is interested in that.
+However, I will ramble [elsewhere](/blog), and here I will attempt to provide a brief description of my own experience, on the assumption that the reader (that's you) is interested in that.
 
 * 2003-2008 - I was a software Product Manager at 8200 (IDF). My two biggest projects was a knowledge management tool and an in-house BI tool. Both were pretty awesome. I still have a soft spot for knowledge management and BI tools. 
 
