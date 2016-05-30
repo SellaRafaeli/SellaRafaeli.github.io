@@ -1,8 +1,6 @@
 Hey, my name is Sella Rafaeli. 
 
-I'm a Ruby, JavaScript, and Full-Stack [consultant](/consulting). 
-
-I prefer projects in the US (West or East Coast) or Tel Aviv, Israel. 
+I'm a Full-Stack [consultant](/consulting). I prefer projects in the US or Israel. 
 
 I am into [software](/software), [hiking](/hiking), [psychology](/psychology), [spirituality](/spirituality), and [languages](/languages). 
 
