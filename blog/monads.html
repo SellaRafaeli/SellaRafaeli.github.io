@@ -18,7 +18,7 @@
 
 <p>Imagine we have an object:</p>
 
-<div class="language-js highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>joe = {<span style="color:#606">money</span>: <span style="color:#00D">6</span>}
 </pre></div>
 </div>
@@ -32,7 +32,7 @@ function isExtreme(x) { return x &gt; 10 }
 
 <p>Now we can use these functions, separately or together:</p>
 
-<div class="language-js highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>mult2(joe.money) <span style="color:#777">// 10</span>
 isExtreme(joe.money) <span style="color:#777">// true</span>
 isExtreme(mult2(joe.money)) <span style="color:#777">//false</span>
@@ -42,7 +42,7 @@ isExtreme(mult2(joe.money)) <span style="color:#777">//false</span>
 
 <p>Of course, in real life, we’ll need some error-checking.</p>
 
-<div class="language-js highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">mult2</span>(x) { 
   <span style="color:#080;font-weight:bold">if</span> (x&gt;<span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> x * <span style="color:#00D">2</span> 
   <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">return</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Illegal</span><span style="color:#710">&quot;</span></span>
@@ -62,7 +62,7 @@ isExtreme(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="colo
 
 <p>We might also want to propogate the errors more intelligently rather than just throwing ‘Illegal’. Like, maybe the following:</p>
 
-<div class="language-js highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">mult2</span>(x) { 
   <span style="color:#080;font-weight:bold">if</span> (x&gt;<span style="color:#00D">0</span>) <span style="color:#080;font-weight:bold">return</span> x * <span style="color:#00D">2</span> 
   <span style="color:#080;font-weight:bold">else</span> <span style="color:#080;font-weight:bold">return</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Illegal input for mult2 -&gt; </span><span style="color:#710">&quot;</span></span>+x
@@ -81,7 +81,7 @@ isExtreme(mult2(<span style="background-color:hsla(0,100%,50%,0.05)"><span style
 
 <p>Hmmm, this is already something showing signs of repetition. As we add more functions - mult3, add4, etc - we’ll see ourselves repeating our ‘plumbing’ and error-handling. We also see that concatenating the function calls is becoming slightly unwieldly. 4 function calls might look like:</p>
 
-<div class="language-js highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>result = isExtreme(divide4(add1(mult2(x))));
 </pre></div>
 </div>
@@ -89,7 +89,7 @@ isExtreme(mult2(<span style="background-color:hsla(0,100%,50%,0.05)"><span style
 
 <p><strong>Not super fun to maintain.</strong> We’d also have to handle the ‘plumbing’ for each one, wouldn’t we. That’s a bit nasty and repetitive. Let’s abstract that away by using a (pseudo) Monad, a mini-library to abstract the relations between functions. Concretely, we will aim to allow the application writer to define a list of functions to run on the input, as so:</p>
 
-<div class="language-js highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>monadRun([mult2, add1, divide4, isExtreme], <span style="color:#00D">100</span>);
 </pre></div>
 </div>
@@ -99,7 +99,7 @@ isExtreme(mult2(<span style="background-color:hsla(0,100%,50%,0.05)"><span style
 
 <p>We will also define that if any function fails, we will want to carry over the failing message (and not crash), without having to define this error-handling plumbing in each function. The following code block is the monad’s <em>implementation</em> which is <strong>not</strong> necessary to understand in order to use it (and in order to understand what the heck a monad is).</p>
 
-<div class="language-js highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">funcName</span>(fun) { <span style="color:#777">//helper func to define the function's name. </span>
   <span style="color:#080;font-weight:bold">var</span> ret = fun.toString();
   ret = ret.substr(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">function </span><span style="color:#710">'</span></span>.length);
@@ -129,7 +129,7 @@ isExtreme(mult2(<span style="background-color:hsla(0,100%,50%,0.05)"><span style
 
 <p><strong>That was the Monad</strong> (exposed as a function rather than an object). Now, the point of this Monad is to allow whoever is writing the functions an easy way to define functions and run them together:</p>
 
-<div class="language-js highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">mult2</span>(x) { <span style="color:#080;font-weight:bold">return</span> x*<span style="color:#00D">2</span> }
 <span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">add1</span>(x) { <span style="color:#080;font-weight:bold">return</span> x+<span style="color:#00D">1</span> }
 <span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">divide4</span>(x) { <span style="color:#080;font-weight:bold">return</span> x/<span style="color:#00D">4</span> }
@@ -155,7 +155,7 @@ monadRun([mult2, add1, divide4], <span style="background-color:hsla(0,100%,50%,0
 
 <p>Using this and other powerful syntax, we can write completely functional code which looks imperative. For example something like the following Haskell code:</p>
 
-<div class="language-hs highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>main = do
   putStrLn &quot;What is your name?&quot;
   name &lt;- getLine
@@ -166,7 +166,7 @@ monadRun([mult2, add1, divide4], <span style="background-color:hsla(0,100%,50%,0
 
 <p>which appears imperative, is actually equivalent to</p>
 
-<div class="language-haskell highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>main =
   putStrLn &quot;What is your name?&quot; &gt;&gt; 
   getLine &gt;&gt;= \name -&gt;
@@ -177,7 +177,7 @@ monadRun([mult2, add1, divide4], <span style="background-color:hsla(0,100%,50%,0
 
 <p>which is actually equivalent to:</p>
 
-<div class="language-haskell highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>main =
   putStrLn &quot;What is your name?&quot; &gt;&gt; getLine &gt;&gt;= \name -&gt; putStrLn (&quot;Nice to meet you, &quot; ++ name ++ &quot;!&quot;)
 </pre></div>
@@ -194,7 +194,7 @@ monadRun([mult2, add1, divide4], <span style="background-color:hsla(0,100%,50%,0
 
 <p>Each monad defines its own behavior, which might include special execution details of some actions - blocking, deferring, executing on a separate thread, and so on. This allows the monad to abstract away from the developer the ‘correct’ way to execute an action. For example, a monad for web communication or disk I/O might run an action on a separate thread, thus allowing the developer not to worry about it. Imagine the following (fantasy) monadified JS code:</p>
 
-<div class="language-js highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>httpMonad.<span style="color:#06B;font-weight:bold">get</span> = <span style="color:#080;font-weight:bold">function</span>() {
   x = get(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">/remote.json</span><span style="color:#710">'</span></span>);
   doSomethingWith(x);

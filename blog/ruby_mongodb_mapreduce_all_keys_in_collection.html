@@ -5,7 +5,7 @@
 
 <p>In light of both, <strong>here is how to use the Ruby MongoDB native driver to run a MapReduce operation and retrieve all the keys that are present over all documents in a collection.</strong> This can be used to schema analyzing, detecting outliers, and metaprogramming (such as dynamically displaying or querying data by the data’s attributes).</p>
 
-<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">mongodb_all_collection_keys</span>(mongo_session, collection_name)
   opts = {
     <span style="color:#606">mapreduce</span>: collection_name.to_s, 
@@ -22,7 +22,7 @@
 
 <p>Usage:</p>
 
-<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>mongodb_all_collection_keys(<span style="color:#036;font-weight:bold">MONGO_CONN</span>, <span style="color:#A60">:users</span>) 
 <span style="color:#777"># [&quot;_id&quot;, &quot;username&quot;, &quot;name&quot;, &quot;age&quot;, &quot;sex&quot;, &quot;country&quot;, &quot;date_joined&quot;, ...]</span>
 </pre></div>

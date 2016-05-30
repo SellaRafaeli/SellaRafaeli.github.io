@@ -12,15 +12,15 @@ I got a 786 on my Israeli SAT (top 0.001%) with no preparation course. I have wr
 
 My army service was as an intelligence officer in Israel's elite Intelligence technological unit for five years, leading software systems that would change the knowledge-management and data-mining workflows of thousands and winning numerous awards. 
 
-Later, I double-majored in Computer Science and Psychology at the Hebrew University of Jerusalem - it took me three years (Dean's List at the end of the third), of which the last two I also worked at NDS (Cisco). After University I joined Fiverr(.com), the world's leading services marketplace. 
+I later double-majored in Computer Science and Psychology at the Hebrew University of Jerusalem - it took me three years (Dean's List at the end of the third), of which the last two I also worked at NDS (Cisco). After University I joined [Fiverr](https://fiverr.com), the world's leading services marketplace. I left Fiverr and founded my own startup - [yes.no](https://yes.no), the first social network for crowd-interviews (which is still active). 
 
-(Oh, and I am the unoffical world champion in [Egyptian Ratscrew](http://en.wikipedia.org/wiki/Egyptian_Ratscrew)). 
+Oh, and I am the unoffical world champion in [Egyptian Ratscrew](http://en.wikipedia.org/wiki/Egyptian_Ratscrew). 
 
 - - - - 
 
-As of the beginning of 2016, I am the CTO of [https://yes.no](yes.no), a crowd-interviewing platform. 
+Today, I am a [freelance full-stack consultant](/consulting). 
 
-If you are interested, don't be shy, drop me a line. :) 
+If you are interested, don't be shy, hit me up. :) 
 
 * **sella.rafaeli@gmail.com**
 * **(+972)-052-293-4321**
