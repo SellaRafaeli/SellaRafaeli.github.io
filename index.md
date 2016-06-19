@@ -4,7 +4,7 @@ I'm a Full-Stack [consultant](/consulting). I prefer projects in the US or Israe
 
 * [About me](/about.html)
 * [Blog](/blog)
-* [Podcast](/podcast)
+<!-- * [Podcast](/podcast) -->
 <!-- * [readings](/good_reads.html) -->
 * [Résumé](/cv_sella_rafaeli_apr_2016.pdf)
 * [Contact](/contact.html)
