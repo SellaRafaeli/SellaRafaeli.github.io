@@ -27,4 +27,18 @@
 * [Git Book](git-book.html)<span class='created_at'>2014-07-01</span>
 * [Git Rebase -i Belong To Us](https://medium.com/@sellarafaeli/git-rebase-i-belong-to-us-4d7010387683)<span class='created_at'>2014-02-17</span>
 * [Git 'Rebase' For Startups](https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14)<span class='created_at'>2014-01-30</span>
-* [Wordpress Blog - 2009-2014](http://sellarafaeli.wordpress.com)
+* [Mongo Native TTL](https://sellarafaeli.wordpress.com/2014/07/22/mongo-native-ttl/)
+* [Mongo Console BI Syntax Essentials](https://sellarafaeli.wordpress.com/2014/05/15/mongo-console-bi-syntax-essentials/)
+* [Node Background Processing Awesomeness](https://sellarafaeli.wordpress.com/2014/04/01/node_background_processing_awesomeness/)
+* [Copying Files over SSH hops](https://sellarafaeli.wordpress.com/2014/03/24/copy-local-files-into-remote-server-through-n1-ssh-hops/)
+* [Git Sandbox Book](https://sellarafaeli.wordpress.com/2014/03/23/git-sandbox-book/
+https://sellarafaeli.wordpress.com/2014/03/19/ruby-source_location/)
+* [On the Perils of Failing Silently](https://sellarafaeli.wordpress.com/2014/02/28/on-the-perils-of-failing-silently/)
+* [Optimal Notes Strategy For Productivity Freaks](https://sellarafaeli.wordpress.com/2014/02/01/optimal-notes-strategy-for-productivity-freaks/)
+* [Vim Basics: VimRC Ruby Coloring and Syntax](https://sellarafaeli.wordpress.com/2014/01/09/vim-basics-vimrc-ruby-coloring-and-syntax/)
+* [There Are No Small Delays](https://sellarafaeli.wordpress.com/2014/01/08/the-are-no-small-delays/)
+* [Pimp Your RubyMine](https://sellarafaeli.wordpress.com/2014/01/03/pimp-your-rubymine-6/)
+* [Nothing is Free](https://sellarafaeli.wordpress.com/2013/12/20/a-programmer-with-a-mac-contentious-opinions-nothing-is-free/)
+* [How I Came About Studying Computer Science](https://sellarafaeli.wordpress.com/2013/01/14/how-i-came-about-studying-computer-science/)
+* [Interviewers That Read a Candidate's Blog](https://sellarafaeli.wordpress.com/2013/01/02/interviewers-that-read-a-candidates-blog/)
+* [Older Posts, Wordpress Blog - 2009-2014](http://sellarafaeli.wordpress.com)
