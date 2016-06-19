@@ -8,7 +8,7 @@ I'm a Full-Stack [consultant](/consulting). I prefer projects in the US or Israe
 <!-- * [readings](/good_reads.html) -->
 * [Résumé](/cv_sella_rafaeli_apr_2016.pdf)
 * [Contact](/contact.html)
-* [Creative](/creative.html)
+<!-- * [Creative](/creative.html) -->
 
 I am also into [software](/software), [hiking](/hiking), [psychology](/psychology), [spirituality](/spirituality), and [languages](/languages). 
 
