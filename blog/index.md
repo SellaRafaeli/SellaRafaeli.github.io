@@ -42,6 +42,6 @@
 * [Nothing is Free](https://sellarafaeli.wordpress.com/2013/12/20/a-programmer-with-a-mac-contentious-opinions-nothing-is-free/)
 * <img src='/img/star.png' class='star'> [How I Came About Studying Computer Science](https://sellarafaeli.wordpress.com/2013/01/14/how-i-came-about-studying-computer-science/)
 * [Interviewers That Read a Candidate's Blog](https://sellarafaeli.wordpress.com/2013/01/02/interviewers-that-read-a-candidates-blog/)
-* [Linear Algebra book (Hebrew)](https://sites.google.com/site/linearit1hujibook/)
-* [Computer Science Algorithms book (Hebrew)](https://sites.google.com/site/linearit1hujibook/see-also)
+* <img src='/img/star.png' class='star'> [Linear Algebra book (Hebrew)](https://sites.google.com/site/linearit1hujibook/)
+* <img src='/img/star.png' class='star'> [Computer Science Algorithms book (Hebrew)](https://sites.google.com/site/linearit1hujibook/see-also)
 * <img src='/img/star.png' class='star'> [Older Posts, Wordpress Blog - 2009-2014](http://sellarafaeli.wordpress.com)
