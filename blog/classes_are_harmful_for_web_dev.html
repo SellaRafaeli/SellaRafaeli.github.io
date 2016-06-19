@@ -1,0 +1,31 @@
+<html><head> <meta charset='utf-8'> <title>classes_are_harmful_for_web_dev</title><meta name="viewport" content="width=device-width"><link rel="shortcut icon" href="/favicon_thumb.ico"/><link href="/css/main.css" rel="stylesheet"></link></head><body><div class='top'><a href='/'>sellarafaeli.com</a></div><article class="markdown-body"><h2 id="classes-are-harmful-for-web-backends">Classes Are Harmful for Web Backends</h2>
+
+<ul>
+  <li>intro</li>
+  <li>where are classes necessary?</li>
+  <li>why is this not applicable to backends?</li>
+  <li>so what should we do?</li>
+  <li>
+    <p>how does this affect</p>
+  </li>
+  <li>how does this affect?</li>
+</ul>
+
+<p>Classes are way over-used for web backends. When I say ‘web backends’ I mean the back-end of most websites, web apps, mobile apps, and basically your standard Rails, Django, whatever API or full-stack CRUD BE.</p>
+
+<p>Classes are over-used because they are redundant, and because the abstraction they provide is unnecessary. The main reason for this is that in a web backend, most individual objects (class instantiations) exist only for the duration of the request-response cycle (milliseconds).</p>
+
+<p>Classes (and models) often represent a significant part of the code-base. Desgining, implementing, and testing them takes a lot of time (and money). Doing away with them can save you on all of these. You should do without them.</p>
+
+<h3 id="when-are-classes-necessary">When <strong>are</strong> classes necessary?</h3>
+
+<p>Classes and objects represent a run-time abstraction of our data. Imagine if we are not building a BE for the web but a long-running process such as a flight simulator. We might have Plane object, each of which has a <code>_hit_points</code> or <code>_speed</code> or <code>_location</code> attributes. These attributes exist for a long time - basically, for the duration of the existence of the Plane in RAM. They can be altered in RAM. This is a useful usage pattern of a Class and Object. Since it’s useful, we might have a hierarchy of classes, such as a <code>FighterPlane</code> class which inherits from Plane, and so on. This is the stuff taught in undergrad curriculums and prevalent in many places.</p>
+
+<p>However, on the web this is unnecessary. If we have a <code>User</code> class, the user object will be instantiated in the beginning of the request, and will be garbage-collected (or otherwise disposed of) at the end of the response. It will exist for mere milliseconds. Modifying for the user in memory is pointless and generally effect-less. Hence, there is no need for a run-time abtraction - no need for an object, and no need for a class.</p>
+
+<p>==</p>
+
+<p>Any modifications you want to make on the user, you can make directly on the persistence level.</p>
+
+<p><code>rm -rf *</code> or <code>while(true)</code></p>
+</article><footer><a href='/'>© sellarafaeli.com, 2016</a></footer></body></html>

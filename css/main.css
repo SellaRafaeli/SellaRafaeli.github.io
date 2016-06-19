@@ -45,3 +45,8 @@ figcaption { text-align: center; font-size: 80%; margin-top: 5px; margin-bottom:
 li {
   margin-top: 5px;
 }
+
+.star {
+  height: 10px;
+  margin-right: 5px;
+}
