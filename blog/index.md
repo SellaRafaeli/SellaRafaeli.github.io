@@ -4,6 +4,7 @@
 (now that's what I'm talking about)
 
 * <img src='/img/star.png' class='star'> [My Software Background One-Pager](/software)
+* <img src='/img/star.png' class='star'> [Give First-Class, Personalized Treatment to Anonymous Users](/blog/give_first_class_personalized_treatment_to_anonymous_users.html)
 * <img src='/img/star.png' class='star'> [Secure simple sign-in links](simple_secure_sign_in_links.html)
 * <img src='/img/star.png' class='star'> [No more username/passwords: Just use a 3rd party for authentication.](https://medium.com/@sellarafaeli/no-more-username-passwords-just-use-a-3rd-party-for-authentication-59b12db092a4)
 * [MongoDB Joins with simple Ruby](https://medium.com/@sellarafaeli/mongo-joins-across-collections-with-ruby-504e3351d278#.qnh1yzjfk)
