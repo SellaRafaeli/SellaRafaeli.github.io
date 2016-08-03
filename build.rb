@@ -1,10 +1,14 @@
 #$ ruby generate_content.rb
 require 'find'
 require 'kramdown'
+require 'erb'
 
 def wrap_file_in_html(file_path, custom_content = nil)     
    basename = File.basename(file_path, ".html")
    basename = 'sellarafaeli.com' if basename == 'index'
+   content  = "#{custom_content || File.read(file_path)}" 
+   template = ERB.new File.read("/template.erb"), nil, "%"
+   template = template.result(binding)
    template = "<html><head> <meta charset='utf-8'> <title>#{basename}</title>"+
                         '<meta name="viewport" content="width=device-width">'+
                         '<link rel="shortcut icon" href="/favicon_thumb.ico"/>'+
@@ -19,9 +23,14 @@ def wrap_file_in_html(file_path, custom_content = nil)
                         '<body>'+
                         "<div class='top'><a href='/'>sellarafaeli.com</a></div>" + 
                         '<article class="markdown-body">'+                       
-                        "#{custom_content || File.read(file_path)}"+
+                        content+
                         '</article>'+
-                        "<footer><a href='/'>© sellarafaeli.com, 2016</a></footer></body></html>"
+                        "<footer style='font-size:80%'>
+    <div style='border-top:2px solid lightgrey; margin: 15px'></div>
+    I <a href='/blog'>write extensively</a> about advanced web development and am available for <a href='/consulting.html'>consulting</a> anywhere in the world. 
+    <div>© <a href='/'>sellarafaeli.com</a>, 2016</div>
+  </footer>"+
+                        "</body></html>"
    File.write(file_path,template)
 end
 
