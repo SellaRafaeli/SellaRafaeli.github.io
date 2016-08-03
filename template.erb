@@ -1,7 +1,7 @@
 <html>
 <head> 
     <meta charset='utf-8'>
-    <title>sellarafaeli.com</title>
+    <title><%= basename %></title>
     <meta name="viewport" content="width=device-width">
     <!-- <link rel="shortcut icon" href="/favicon_thumb.ico"/> -->
     <link rel="shortcut icon" href="/img/whatsapp_profile.jpeg"/>
@@ -20,27 +20,7 @@
     </div>  
 
     <article class=markdown-body>                      
-        <p>Hey, my name is Sella Rafaeli.</p>
-
-<p>I’m a Full-Stack <a href="/consulting">consultant</a>. I prefer projects in NYC or TLV.</p>
-
-<p>I am also into <a href="/software">software</a>, <a href="/hiking">hiking</a>, <a href="/psychology">psychology</a>, <a href="/spirituality">spirituality</a>, and <a href="/languages">languages</a>.</p>
-
-<ul>
-  <li><a href="/about.html">About me</a></li>
-  <li><a href="/blog">Blog</a><br />
-<!-- * [readings](/good_reads.html) --></li>
-  <li><a href="/cv_sella_rafaeli_apr_2016.pdf">Résumé</a></li>
-  <li><a href="/contact.html">Contact</a></li>
-</ul>
-
-<div class="center">
-  <img src="http://imgur.com/NJoZJIs.jpg" />
-</div>
-
-<!-- * [Creative](/creative.html) -->
-<!-- * [Podcast](/podcast) -->
-
+        <%= content %>
     </article>
     
     <footer style='font-size:80%'>

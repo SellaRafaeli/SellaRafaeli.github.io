@@ -1,7 +1,26 @@
-<html><head> <meta charset='utf-8'> <title>simple_secure_sign_in_links</title><meta name="viewport" content="width=device-width"><link rel="shortcut icon" href="/favicon_thumb.ico"/><link href="/css/main.css" rel="stylesheet"></link></head><body><div class='top'><a href='/'>sellarafaeli.com</a></div><div>
+<html>
+<head> 
+    <meta charset='utf-8'>
+    <title>simple_secure_sign_in_links</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- <link rel="shortcut icon" href="/favicon_thumb.ico"/> -->
+    <link rel="shortcut icon" href="/img/whatsapp_profile.jpeg"/>
+    <link href="/css/main.css" rel="stylesheet"></link>
+    <!--     <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
+    <link href="/css/github_markdown.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Aua5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <!-- <link href="/css/mobile.css" rel="stylesheet" media="handheld">
+    <link href="/css/swiss.css" rel="stylesheet"></link>
+    <link href="/css/markdown.css" rel="stylesheet"></link> -->
+</head>
 
-  </div>
-  <article class="markdown-body"><h1 id="simple-secure-sign-in-links">Simple, Secure Sign-In Links</h1>
+<body>
+    <div class=top>
+        <a href=/><img src='/img/whatsapp_profile.jpeg' height=35 style='border-radius: 50%; margin-right:10px; vertical-align: bottom'/>sella rafaeli, web dev @ NY & TLV</a>
+    </div>  
+
+    <article class=markdown-body>                      
+        <h1 id="simple-secure-sign-in-links">Simple, Secure Sign-In Links</h1>
 
 <p>We previously explored why <a href="https://medium.com/@sellarafaeli/no-more-username-passwords-just-use-a-3rd-party-for-authentication-59b12db092a4#.4hapiv7p7">you should use only a 3rd-party authentication</a>.</p>
 
@@ -67,8 +86,25 @@ Note the email and time are exposed in the URL, but that’s OK.</p>
 <p>b. The above does not ensure tokens are used only once. If that is desired, a persistence mechanism must be added, e.g. saving tokens via Redis to make sure they are not used more than once.)</p>
 
 <p>So as we can see - it’s dead-simple. You can easily craft a secure sign-in link, and by mailing it, the recipient can prove they own that email.</p>
-</article><footer style='font-size:80%'>
-    <div style='border-top:2px solid lightgrey; margin: 15px'></div>
-    I <a href='/blog'>write extensively</a> about advanced web development and am available for <a href='/consulting.html'>consulting</a> anywhere in the world. 
-    <div>© <a href='/'>sellarafaeli.com</a>, 2016</div>
-  </footer></body></html>
+
+    </article>
+    
+    <footer style='font-size:80%'>
+        <div style='border-top:2px solid lightgrey; margin: 15px'></div>
+        If you enjoyed this, <a href='/contact'>drop me a line</a>. I <a href='/blog'>write extensively</a> about advanced web development and am available for <a href='/consulting.html'>consulting</a> anywhere in the world. 
+        <div>© <a href='/'>sellarafaeli.com</a>, 2016</div>
+    </footer>
+
+    <script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(100778787);
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//static.getclicky.com/js';
+      ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+    </script>
+</body>
+</html>
