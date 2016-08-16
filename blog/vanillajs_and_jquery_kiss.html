@@ -1,0 +1,125 @@
+<html>
+<head> 
+    <meta charset='utf-8'>
+    <title>vanillajs_and_jquery_kiss</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- <link rel="shortcut icon" href="/favicon_thumb.ico"/> -->
+    <link rel="shortcut icon" href="/img/whatsapp_profile.jpeg"/>
+    <link href="/css/main.css" rel="stylesheet"></link>
+    <!--     <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
+    <link href="/css/github_markdown.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Aua5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <!-- <link href="/css/mobile.css" rel="stylesheet" media="handheld">
+    <link href="/css/swiss.css" rel="stylesheet"></link>
+    <link href="/css/markdown.css" rel="stylesheet"></link> -->
+</head>
+
+<body>
+    <div class=top>
+        <a href=/><img src='/img/whatsapp_profile.jpeg' height=35 style='border-radius: 50%; margin-right:10px; vertical-align: bottom'/>Sella Rafaeli, full-stack @ NY & TLV</a>
+    </div>  
+
+    <article class=markdown-body>                      
+        <h2 id="vanillajs-and-jquery---minimal-html-directives">VanillaJS and jQuery - Minimal HTML Directives</h2>
+
+<p>JavaScript (coupled with the DOM) is so flexible and powerful that you can do many things using just Vanilla JS or jQuery.</p>
+
+<p>(As a side note, I am talking about jQuery and vanilla interchangeably here because what I really mean is “without big-ass framework/libs”, and whatever jQuery you use for syntatic compactness could rather easily be rewritten using just vanilla, if necessary.)</p>
+
+<p>It is worth digressing over this because frameworks come and go and Vanilla will be here forever. (jQuery also seems like it will be here forever. I’m only half joking.) It is important to learn the fundamentals well; it is often overlooked how simple and elegant (and maintainable) they can be.</p>
+
+<h3 id="example-self-validating-inputs">Example: Self-validating Inputs</h3>
+
+<p>In my app I have forms and I want to validate some of their fields. But I want this validation to be declarative and immediate (e.g. not only upon submission) - whenever there is an error in the input, I want the input itself to take care of it.</p>
+
+<p>One could think of many ways to access this problem using heavy guns - most popularly today people would use React or some other functional library making the view a function of the state, and then syncing the input’s value with some model and syncing additional view parts (e.g. an error message, other indication of error, default value, etc) to the model as well.</p>
+
+<p>This often results in a lot of code and despite the aesthetical benefit of a ‘pure’ view, I’d argue that just a couple lines of JS can give the equivalent of a ‘directive’ - but much leaner than, say, Angular.</p>
+
+<p>Let’s choose for example to force-populate a default value in each such self-correcting input. The following code could suffice for that:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;input</span> <span style="color:#b48">data-default-val</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">my default val</span><span style="color:#710">'</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+
+<span style="color:#070;font-weight:bold">&lt;script&gt;</span>
+<span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">resetOnEmpty</span>(event) {  
+  <span style="color:#080;font-weight:bold">var</span> elem = event.target;
+  <span style="color:#080;font-weight:bold">if</span> (!elem.value) { 
+    elem.value = elem.dataset[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">defaultVal</span><span style="color:#710">'</span></span>];
+  }
+}
+
+<span style="color:#369;font-weight:bold">$</span>(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">[data-default-val]</span><span style="color:#710">'</span></span>).on(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">blur</span><span style="color:#710">'</span></span>, resetOnEmpty)</span>
+<span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<p>It’s very minimal, readable, maintainable. Anyone who knows JS should be fine working with it. The minimal jQuery could be rewritten in Vanilla, if so desired. Suppose we wanted to add additional validation logic rather than just an empty value (say, check that the value is long enough), or additional behaviour (e.g. alert the user the field can’t be empty). It’s clear how to add or read this piece of code.</p>
+
+<p>Most importantly, it is self-contained, and you do not need to understand anything else.</p>
+
+<p>Let’s modify/repeat this exercise: This time we’ll create inputs that show a red border when cleared. In additional to Vanilla JS (and yes, jQuery for succinctness) we’ll throw in some vanilla CSS.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;input</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">warnOnEmpty</span><span style="color:#710">'</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+
+<span style="color:#070;font-weight:bold">&lt;style&gt;</span>
+<span style="background-color:hsla(0,0%,0%,0.07);color:black">  <span style="color:#B06;font-weight:bold">.error-border</span> { 
+    <span style="color:#606">border</span>:<span style="color:#60E">1px</span> <span style="color:#088">solid</span> <span style="color:#088">red</span>;
+  }</span>
+<span style="color:#070;font-weight:bold">&lt;/style&gt;</span>
+
+<span style="color:#070;font-weight:bold">&lt;script&gt;</span>
+<span style="background-color:hsla(0,0%,0%,0.07);color:black">
+<span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">warnOnEmptyInput</span>(selectorStr) {
+  <span style="color:#080;font-weight:bold">var</span> elems = <span style="color:#369;font-weight:bold">$</span>(selectorStr);
+  elems.focus(<span style="color:#080;font-weight:bold">function</span>(){ <span style="color:#369;font-weight:bold">$</span>(<span style="color:#950">this</span>).removeClass(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">error-border</span><span style="color:#710">'</span></span>) });
+  elems.blur(<span style="color:#080;font-weight:bold">function</span>(){ 
+    <span style="color:#080;font-weight:bold">if</span> (!<span style="color:#950">this</span>.value.length) { 
+      <span style="color:#369;font-weight:bold">$</span>(<span style="color:#950">this</span>).addClass(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">error-border</span><span style="color:#710">'</span></span>) 
+    }
+  });
+}
+
+warnOnEmptyInput(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">.warnOnEmpty</span><span style="color:#710">'</span></span>)</span>
+<span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<p>That’s it, we now have a small directive of an input that adds a friendly error border when cleared. Again it is easy to see where and how to add or modify the error indicator - we could even add a message right after the input, if we wanted to.</p>
+
+<p>You’ll note in both examples we used ‘blur’ to trigger the error-handling only after the user has left the input, since that’s the UX I think is best. Alternatively we could trigger it when the empty value first appears, during the editing (i.e. ‘onkeyup’ rather than ‘onblur’). These kind of nuances would be hard to discern using a framework - you’d have to dig to get to it (if possible). But using Vanilla you’re at the base level and making such modifications is trivial.</p>
+
+<p>You can see both examples at this jsFiddle: <a href="https://jsfiddle.net/4o6npv3s/">https://jsfiddle.net/4o6npv3s/</a>.</p>
+
+<h3 id="partials">Partials</h3>
+
+<p>Using the above technique, you effectively now have HTML ‘partials’ that behave as independent components (directives). The above is a relatively trivial example, but now any time you render  <code>&lt;input data-default-val='foo'&gt;</code>  you get a component that maintains its own state with its own data. You can extend this technique, of course, to more complicated constructs - but most importantly, you can use it for standard stuff, and keep your code tiny, shiny, mean, and lean.</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>JavaScript is powerful. VanillaJS and jQuery go a long way. Coupled with the DOM, you can define powerful, lean, independent directives - without needing frameworks.</p>
+
+    </article>
+    
+    <footer style='font-size:80%'>
+        <div style='border-top:2px solid lightgrey; margin: 15px'></div>
+        Feel free to <a href='/contact'>drop me a line</a>. I <a href='/blog'>write extensively</a> about advanced web development and am available for <a href='/consulting.html'>consulting</a> anywhere in the world. 
+        <div>© <a href='/'>sellarafaeli.com</a>, 2016</div>
+    </footer>
+
+    <script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(100778787);
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//static.getclicky.com/js';
+      ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+    </script>
+</body>
+</html>
