@@ -11,7 +11,7 @@ I am also into [software](/software), [hiking](/hiking), [psychology](/psycholog
 * [Contact](/contact.html)
 
 <div class='center'>
-  <img src="http://imgur.com/NJoZJIs.jpg">
+  <img src="https://imgur.com/NJoZJIs.jpg">
 </div>
 
 <!-- * [Creative](/creative.html) -->

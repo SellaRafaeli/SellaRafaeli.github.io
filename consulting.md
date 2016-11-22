@@ -18,5 +18,5 @@ You can read more [about me](/about), about my [software experience](/software) 
 Happy hacking! :)
 
 <div class='center'>
-  <img src="http://imgur.com/NJoZJIs.jpg">
+  <img src="https://imgur.com/NJoZJIs.jpg">
 </div>
