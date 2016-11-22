@@ -30,7 +30,7 @@
 
 <p>The implementation might be (conceptually) to check if this is a known user, and not, create one (pseudo-code):</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-ruby highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>before <span style="color:#080;font-weight:bold">do</span>
   session[<span style="color:#A60">:guid</span>] ||= <span style="color:#036;font-weight:bold">SecureRandom</span>.uuid 
   <span style="color:#33B">@current_user</span>    = <span style="color:#036;font-weight:bold">Users</span>.find_one(<span style="color:#606">guid</span>: session[<span style="color:#A60">:guid</span>]) || <span style="color:#036;font-weight:bold">Users</span>.new(<span style="color:#606">guid</span>: session[<span style="color:#A60">:guid</span>])

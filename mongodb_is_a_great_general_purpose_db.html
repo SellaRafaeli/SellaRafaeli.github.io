@@ -1,0 +1,89 @@
+<html>
+<head> 
+    <meta charset='utf-8'>
+    <title>mongodb_is_a_great_general_purpose_db</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- <link rel="shortcut icon" href="/favicon_thumb.ico"/> -->
+    <link rel="shortcut icon" href="/img/whatsapp_profile.jpeg"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet"></link>
+
+    <!--     <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
+    <link href="/css/github_markdown.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Aua5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <!-- <link href="/css/mobile.css" rel="stylesheet" media="handheld">
+    <link href="/css/swiss.css" rel="stylesheet"></link>
+    <link href="/css/markdown.css" rel="stylesheet"></link> -->
+</head>
+
+<body>
+    <div class=top>
+        <a href=/><img src='/img/whatsapp_profile.jpeg' height=35 style='border-radius: 50%; margin-right:10px; vertical-align: bottom'/>Sella Rafaeli, full-stack @ NY & TLV</a>
+    </div>  
+
+    <article class=markdown-body>                      
+        <h1 id="mongodb-is-a-great-general-purpose-db">MongoDB is a great general-purpose DB</h1>
+
+<p>MongoDB is a great general-purpose DB. If you’re starting some app and you don’t have any specific reason not too, I would strongly suggest considering Mongo as your main DB. There are technical benefits to MongoDB (such as scaling) but these are not as important as the ease of development MongoDB enables.</p>
+
+<h2 id="1-no-schema">1. No Schema</h2>
+
+<p>Mongo collections have no schema. This means you can choose whatever properties to assign an object (a document) during runtime. As you iteratively develop a feature, you decide in the code what properties the objects should have - and by virtue of being assigned in the code, the DB is just created.</p>
+
+<p>This lets you develop faster and more flexibly  - as you can just add a field in the code and it will immediately apply to the DB level. It’s as if you had something inferring the schema of the document from the code you wrote. No dealing with schema files, no migrations.</p>
+
+<p>This also allows you to assign individual documents with fields other documents do not have. E.g., perhaps only some <code>user</code> objects have an <code>admin</code> property, and some <code>order</code> objects have a <code>shipping_cost</code> property. This maps most cleanly onto the way we think of items in human terms - items do not have a subset of fields. Each item may have unique fields.</p>
+
+<p>Notably, you <strong>can</strong> enforce a schema using an ODM/ORM but I would advise not to. Having no schema is great. While many fear the looseness this enables, we have seen this looseness ‘win’ may battles: we used to decry JS as an inferior language, while today it is perhaps the most popular language in the world. JS objects famously have no ‘schema’, and can have any property at any time. We also used to ship XML (structured content) as a communication protocol, while today the most common format is JSON - objects with no defined schema. MongoDB is simply the same successful method of thinking - at the DB level. Which brings us to the next point.</p>
+
+<h2 id="2-json-format">2. JSON format</h2>
+
+<p>JSON is widely accepted as the lingua franca data exchange format. Web app clients model objects as JSON; HTTP (and other) communication is generally done with JSON; web servers also often model their data as plain JSON hashes. It only makes sense to have the DB match this modeling, and thus you get a single representation of data. For example the following is the data of one user:</p>
+
+<div class="language-js highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre>  {
+    <span style="color:#606">_id</span>: <span style="color:#00D">123</span>,
+    <span style="color:#606">name</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Sella Rafaeli</span><span style="color:#710">'</span></span>,
+    <span style="color:#606">age</span>: <span style="color:#00D">31</span>
+  }
+</pre></div>
+</div>
+</div>
+
+<p>This is what the user would like in the client, in the server, over the wire (HTTP), and in the DB. And that’s fantastic. Since MongoDB documents are natively (binary) JSON, the interface is smoother.</p>
+
+<hr />
+
+<h2 id="dont-use-denormalized-nested-documents">Don’t use denormalized (nested) documents</h2>
+
+<p>It’s important to note I do not advocate using denormalized documents - those are hard to get right. Denormalized documents are effectively a form of caching, which everyone knows is one of the two hard things in CS. You should use a simple normalized representation of your data, same way you would in SQL land. This means a users collection, a posts collection, an orders collection, and so on. You do whatever joins you need in your own code; Mongo’s reads are fast enough that that won’t be the bottleneck, and when you reach the point that is is - it’s time to implement caching mechanisms anyway.</p>
+
+<h2 id="the-harder-parts">The harder parts</h2>
+
+<p>The above points stress that fast, flexible development which is easy to reason about and modify. DB choice has many facets and consideration, but IMO the above points out-shine anything else. Writing ‘joins’ in your own code - usually the largest issue - is something particularly complex to maintain. And if you can manage that, then you get the best of all worlds.</p>
+
+<h2 id="bottom-line">Bottom line</h2>
+
+<p>If you’re not sure what DB to use, MongoDB will give you a fast, flexible, JSON-oriented DB that will let you move as fast as you are able to without slowing you down in DB-maintenance.</p>
+
+    </article>
+    
+    <footer style='font-size:80%'>
+        <div style='border-top:2px solid lightgrey; margin: 15px'></div>
+        Feel free to <a href='/contact'>drop me a line</a>. I <a href='/blog'>write extensively</a> about advanced web development and am available for <a href='/consulting.html'>consulting</a> anywhere in the world. 
+        <div>© <a href='/'>sellarafaeli.com</a>, 2016</div>
+    </footer>
+
+    <script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(100778787);
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//static.getclicky.com/js';
+      ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+    </script>
+</body>
+</html>

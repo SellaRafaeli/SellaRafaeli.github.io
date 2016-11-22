@@ -4,6 +4,7 @@
 (now that's what I'm talking about)
 
 * <img src='/img/star.png' class='star'> [My Software Background One-Pager](/software)
+* [MongoDB is a Great General-Purpose DB](/blog/mongodb_is_a_great_general_purpose_db.html)
 * [VanillaJS and jQuery - Minimal HTML Directives](/blog/vanillajs_and_jquery_kiss.html)
 * <img src='/img/star.png' class='star'> [Give First-Class, Personalized Treatment to Anonymous Users](/blog/give_first_class_personalized_treatment_to_anonymous_users.html)
 * <img src='/img/star.png' class='star'> [Secure simple sign-in links](simple_secure_sign_in_links.html)
