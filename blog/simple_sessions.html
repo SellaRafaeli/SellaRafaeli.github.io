@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- <link rel="shortcut icon" href="/favicon_thumb.ico"/> -->
     <link rel="shortcut icon" href="/img/whatsapp_profile.jpeg"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
     <link href="/css/main.css" rel="stylesheet"></link>
 
     <!--     <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
@@ -18,7 +18,7 @@
 
 <body>
     <div class=top>
-        <a href=/><img src='/img/whatsapp_profile.jpeg' height=35 style='border-radius: 50%; margin-right:10px; vertical-align: bottom'/>Sella Rafaeli, full-stack @ NY & TLV</a>
+        <a href=/><img src='/img/whatsapp_profile.jpeg' height=35 style='border-radius: 50%; margin-right:10px; vertical-align: bottom'/>Sella Rafaeli, full-stack web consulting</a>
     </div>  
 
     <article class=markdown-body>                      
@@ -40,12 +40,10 @@
 
 <h2 id="background">Background</h2>
 
-<p>The concept behind JWT is:</p>
-<ol>
-  <li>taking a JSON object (<code>{user_id: 123}</code>) and encrypting it into a simple string (<code>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.i5QID8gFRia5TpyseGhYAb0rusHUiV_0pW19hRL6LtM"</code>).</li>
-  <li>The server gives this token to the client and the client sends it along in subsequent requests.</li>
-  <li>Henceforth, in any request, the JWT token is supplied. The server decrypts it (back into <code>{user_id: 123}</code>) and since the encryption ensures the trust-worthiness of the data, the server can now treat this as authenticated data - this action has been performed by user with id 123.</li>
-</ol>
+<p>The concept behind JWT is:<br />
+1. taking a JSON object (<code>{user_id: 123}</code>) and encrypting it into a simple string (<code>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.i5QID8gFRia5TpyseGhYAb0rusHUiV_0pW19hRL6LtM"</code>). <br />
+2. The server gives this token to the client and the client sends it along in subsequent requests. <br />
+3. Henceforth, in any request, the JWT token is supplied. The server decrypts it (back into <code>{user_id: 123}</code>) and since the encryption ensures the trust-worthiness of the data, the server can now treat this as authenticated data - this action has been performed by user with id 123.</p>
 
 <p>The above scheme can be further employed to set any arbitrary data in the encrypted JSON, thus enabling robust stateful sessions (in addition to authentication of the calling user).</p>
 
@@ -67,11 +65,9 @@ Done installing documentation for jwt after 0 seconds
  =&gt; [{"user_id"=&gt;123}, {"typ"=&gt;"JWT", "alg"=&gt;"HS256"}]
 </code></pre>
 
-<p>To recap, the modus operandi of using JSON web tokens for authentication and sessions is:</p>
-<ol>
-  <li>Wrap whatever data you want the client to ‘remember’, encrypt it, and send it to the client.</li>
-  <li>Decrypt any JSON token coming from the client and treat its data as representing the authentication and session of the client.</li>
-</ol>
+<p>To recap, the modus operandi of using JSON web tokens for authentication and sessions is:<br />
+1. Wrap whatever data you want the client to ‘remember’, encrypt it, and send it to the client. <br />
+2. Decrypt any JSON token coming from the client and treat its data as representing the authentication and session of the client.</p>
 
 <p>This scheme is quite simple. It removes the need from the server to manage any user sessions (commonly implemented in an SQL UserSession table or in a Redis server), both in I/O performance and (more importantly) in simplicity.</p>
 
@@ -79,7 +75,7 @@ Done installing documentation for jwt after 0 seconds
 
 <p>Let’s observe a concrete example of a Ruby web app utilizing JWT for authnetication. The following is a complete web app (assuming you have <code>gem install</code>ed <code>sinatra</code> and <code>jwt</code> gems) - plop the contents in a <code>hi.rb</code> file and run <code>$ ruby hi.rb</code>.</p>
 
-<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">sinatra</span><span style="color:#710">'</span></span>
 require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">jwt</span><span style="color:#710">'</span></span>
 
@@ -110,7 +106,7 @@ $ curl "localhost:4567/me?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2l
 
 <p>For completeness’s sake let’s observe a “full” app utilizing said JWT for authentication. To run this you must also <code>$ gem install mongo</code>, then throw the following into a ‘full.rb’ file and hit <code>$ ruby full.rb</code>.</p>
 
-<div class="language-ruby highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">sinatra</span><span style="color:#710">'</span></span>
 require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">jwt</span><span style="color:#710">'</span></span>
 require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">mongo</span><span style="color:#710">'</span></span>
@@ -178,7 +174,7 @@ get <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710
     <footer style='font-size:80%'>
         <div style='border-top:2px solid lightgrey; margin: 15px'></div>
         Feel free to <a href='/contact'>drop me a line</a>. I <a href='/blog'>write extensively</a> about advanced web development and am available for <a href='/consulting.html'>consulting</a> anywhere in the world. 
-        <div>© <a href='/'>sellarafaeli.com</a>, 2016</div>
+        <div>© <a href='/'>sellarafaeli.com</a>, 2017</div>
     </footer>
 
     <script type="text/javascript">

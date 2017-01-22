@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- <link rel="shortcut icon" href="/favicon_thumb.ico"/> -->
     <link rel="shortcut icon" href="/img/whatsapp_profile.jpeg"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
     <link href="/css/main.css" rel="stylesheet"></link>
 
     <!--     <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
@@ -18,7 +18,7 @@
 
 <body>
     <div class=top>
-        <a href=/><img src='/img/whatsapp_profile.jpeg' height=35 style='border-radius: 50%; margin-right:10px; vertical-align: bottom'/>Sella Rafaeli, full-stack @ NY & TLV</a>
+        <a href=/><img src='/img/whatsapp_profile.jpeg' height=35 style='border-radius: 50%; margin-right:10px; vertical-align: bottom'/>Sella Rafaeli, full-stack web consulting</a>
     </div>  
 
     <article class=markdown-body>                      
@@ -28,13 +28,13 @@
 
 <p>Two-way data-binding is such an important feature - align your JS models with your HTML view at all times, to reduce boilerplate coding and enhance UX. We will observe two ways of doing this using native JavaScript, with no frameworks - one with revolutionary technology (Object.observe), and one with an original concept (overriding get/set). Spoiler alert - the second one is better. See TL;DR at bottom.</p>
 
-<h3 id="1-objectobserve--domonchange">1: Object.observe &amp;&amp; DOM.onChange</h3>
+<h3 id="objectobserve--domonchange">1: Object.observe &amp;&amp; DOM.onChange</h3>
 
 <p><em>Object.observe()</em> is the <a href="http://www.html5rocks.com/en/tutorials/es7/observe/">new kid on the block</a>. This native JS ability - well, actually it’s a <em>future</em> ability since it’s only proposed for ES7, but it’s already[!] available in the <a href="http://kangax.github.io/compat-table/es7/#Object.observe">current stable Chrome</a> - allows for reactive updates to changes to a JS object. Or in simple English - a callback run whenever an object(‘s properties) change(s).</p>
 
 <p>An idiomatic usage could be:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>log = console.log
 user = {}
 Object.observe(user, <span style="color:#080;font-weight:bold">function</span>(changes){    
@@ -54,7 +54,7 @@ user.fullName <span style="color:#777">// 'Bill Clinton'</span>
 
 <p>But let’s take it to the next level:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#777">//&lt;input id=&quot;foo&quot;&gt;</span>
 user = {};
 div = <span style="color:#369;font-weight:bold">$</span>(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#foo</span><span style="color:#710">&quot;</span></span>);
@@ -76,7 +76,7 @@ div.text() <span style="color:#777">//Bill Clinton</span>
 
 <p>Cool! We just got model-to-view databinding! Let’s DRY ourselves with a helper function.</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#777">//&lt;input id=&quot;foo&quot;&gt;</span>
 <span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">bindObjPropToDomElem</span>(obj, property, domElem) { 
   Object.observe(obj, <span style="color:#080;font-weight:bold">function</span>(changes){    
@@ -99,7 +99,7 @@ user.name = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="co
 
 <p>Now for the other way around - binding a DOM elem to a JS value. A pretty good solution could be a simple use of jQuery’s <em>.change</em> (http://api.jquery.com/change/):</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#777">//&lt;input id=&quot;foo&quot;&gt;</span>
 <span style="color:#369;font-weight:bold">$</span>(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#foo</span><span style="color:#710">&quot;</span></span>).val(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>);
 <span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">bindDomElemToObjProp</span>(domElem, obj, propertyName) {  
@@ -120,7 +120,7 @@ user.name <span style="color:#777">//Obama. </span>
 
 <p>That was pretty awesome. To wrap up, in practice you could combine the two into a single function to create a two-way data-binding:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">bindObjPropToDomElem</span>(obj, property, domElem) { 
   Object.observe(obj, <span style="color:#080;font-weight:bold">function</span>(changes){    
     changes.forEach(<span style="color:#080;font-weight:bold">function</span>(change) {
@@ -146,11 +146,11 @@ user.name <span style="color:#777">//Obama. </span>
 
 <p>Take note to use the correct DOM manipulation in case of a two-way binding, since different DOM elements (input, div, textarea, select) answer to different semantics (text, val). Also take note that two-way data-binding is not always necessary – “output” elements rarely need view-to-model binding and “input” elements rarely need model-to-view binding. But wait – there’s more:</p>
 
-<h3 id="2-go-deeper-changing-get-and-set">2: Go deeper: Changing ‘get’ and ‘set’</h3>
+<h3 id="go-deeper-changing-get-and-set">2: Go deeper: Changing ‘get’ and ‘set’</h3>
 
 <p>We can do even better than the above. Some issues with our above implementation is that using .change breaks on modifications that don’t trigger jQuery’s “change” event - for example, DOM changes via the code, e.g. on the above code the following wouldn’t work:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#369;font-weight:bold">$</span>(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">#foo</span><span style="color:#710">&quot;</span></span>).val(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Putin</span><span style="color:#710">'</span></span>)
 user.name <span style="color:#777">//still Obama. Oops. </span>
 </pre></div>
@@ -163,7 +163,7 @@ user.name <span style="color:#777">//still Obama. Oops. </span>
 
 <p>We used to have the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__">old, non-standard, deprecated way</a> but now we have the new cool (and most importantly, standard) way, using <code>Object.defineProperty</code>, as so:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>user = {}
 nameValue = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Joe</span><span style="color:#710">'</span></span>;
 Object.defineProperty(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>, {
@@ -181,7 +181,7 @@ nameValue <span style="color:#777">//Bob</span>
 </div>
 <p>OK, so now user.name is an alias for nameValue. But we can do more than just redirect the variable to be used - we can use it to create an alignment between the model and the view. Observe:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#777">//&lt;input id=&quot;foo&quot;&gt;</span>
 Object.defineProperty(user, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>, {
   <span style="color:#06B;font-weight:bold">get</span>: <span style="color:#080;font-weight:bold">function</span>() { <span style="color:#080;font-weight:bold">return</span> document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">foo</span><span style="color:#710">&quot;</span></span>).value }, 
@@ -196,7 +196,7 @@ Object.defineProperty(user, <span style="background-color:hsla(0,100%,50%,0.05)"
 
 <p>As usual we make sure to DRY ourselves with something like:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">bindModelInput</span>(obj, property, domElem) {
   Object.defineProperty(obj, property, {
     <span style="color:#06B;font-weight:bold">get</span>: <span style="color:#080;font-weight:bold">function</span>() { <span style="color:#080;font-weight:bold">return</span> domElem.value; }, 
@@ -210,7 +210,7 @@ Object.defineProperty(user, <span style="background-color:hsla(0,100%,50%,0.05)"
 
 <p>usage:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>user = {};
 inputElem = document.getElementById(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">foo</span><span style="color:#710">&quot;</span></span>);
 bindModelInput(user,<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">name</span><span style="color:#710">'</span></span>,inputElem);
@@ -245,7 +245,7 @@ alert(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#7
 
 <p>One weakness is that since this is not a ‘true’ binding (there is no ‘dirty checking’ going on), some cases will fail - updating the view will not ‘trigger’ anything in the model, so for example trying to ‘sync’ two dom elements <em>via the view</em> will fail. That is, binding two elements to the same model will only refresh both elements correctly when the model is ‘touched’. This can be amended by adding a custom ‘toucher’:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>
 <span style="color:#777">//&lt;input id='input1'&gt;</span>
 <span style="color:#777">//&lt;input id='input2'&gt;</span>
@@ -266,7 +266,7 @@ input1.<span style="color:#06B;font-weight:bold">onchange</span> = <span style="
 
 <p>Create a two way data-binding between model and view with native JavaScript as such:</p>
 
-<div class="language-javascript highlighter-coderay"><div class="CodeRay">
+<div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">function</span> <span style="color:#06B;font-weight:bold">bindModelInput</span>(obj, property, domElem) {
   Object.defineProperty(obj, property, {
     <span style="color:#06B;font-weight:bold">get</span>: <span style="color:#080;font-weight:bold">function</span>() { <span style="color:#080;font-weight:bold">return</span> domElem.value; }, 
@@ -289,7 +289,7 @@ bindModelInput(user,<span style="background-color:hsla(0,100%,50%,0.05)"><span s
     <footer style='font-size:80%'>
         <div style='border-top:2px solid lightgrey; margin: 15px'></div>
         Feel free to <a href='/contact'>drop me a line</a>. I <a href='/blog'>write extensively</a> about advanced web development and am available for <a href='/consulting.html'>consulting</a> anywhere in the world. 
-        <div>© <a href='/'>sellarafaeli.com</a>, 2016</div>
+        <div>© <a href='/'>sellarafaeli.com</a>, 2017</div>
     </footer>
 
     <script type="text/javascript">

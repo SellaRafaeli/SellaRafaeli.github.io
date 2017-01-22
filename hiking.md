@@ -1,6 +1,9 @@
-I hike a lot. I mean... a lot. Here are some recent (early 2016) pictures of me hiking.
+I hike a lot. Here are various pictures of me hiking (late 2015 - early 2016)
 
 <div style='text-align: center'>
+  <img src="http://imgur.com/jykJ12i.jpg">
+  <figcaption>Har Tayasim, Israel, Feb 2016</figcaption>  
+
   <img src="http://imgur.com/jykJ12i.jpg">
   <figcaption>Har Tayasim, Israel, Feb 2016</figcaption>
 
