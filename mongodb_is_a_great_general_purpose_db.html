@@ -26,7 +26,7 @@
 
 <p>MongoDB is a great general-purpose DB. If you’re starting some app and you don’t have any specific reason not too, I would strongly suggest considering Mongo as your main DB. There are technical benefits to MongoDB (such as scaling) but these are not as important as the ease of development MongoDB enables.</p>
 
-<h2 id="no-schema">1. No Schema</h2>
+<h2 id="1-no-schema">1. No Schema</h2>
 
 <p>Mongo collections have no schema. This means you can choose whatever properties to assign an object (a document) during runtime. As you iteratively develop a feature, you decide in the code what properties the objects should have - and by virtue of being assigned in the code, the DB is just created.</p>
 
@@ -36,11 +36,11 @@
 
 <p>Notably, you <strong>can</strong> enforce a schema using an ODM/ORM but I would advise not to. Having no schema is great. While many fear the looseness this enables, we have seen this looseness ‘win’ may battles: we used to decry JS as an inferior language, while today it is perhaps the most popular language in the world. JS objects famously have no ‘schema’, and can have any property at any time. We also used to ship XML (structured content) as a communication protocol, while today the most common format is JSON - objects with no defined schema. MongoDB is simply the same successful method of thinking - at the DB level. Which brings us to the next point.</p>
 
-<h2 id="json-format">2. JSON format</h2>
+<h2 id="2-json-format">2. JSON format</h2>
 
 <p>JSON is widely accepted as the lingua franca data exchange format. Web app clients model objects as JSON; HTTP (and other) communication is generally done with JSON; web servers also often model their data as plain JSON hashes. It only makes sense to have the DB match this modeling, and thus you get a single representation of data. For example the following is the data of one user:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-js highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>  {
     <span style="color:#606">_id</span>: <span style="color:#00D">123</span>,
     <span style="color:#606">name</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Sella Rafaeli</span><span style="color:#710">'</span></span>,
