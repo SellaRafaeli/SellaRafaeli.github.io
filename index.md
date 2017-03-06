@@ -7,7 +7,7 @@ I am also into [software](/software), [hiking](/hiking), [psychology](/psycholog
 * [About me](/about.html)
 * [Blog](/blog)
 <!-- * [readings](/good_reads.html) -->
-* [Résumé](/cv_sella_rafaeli_feb_17.pdf)
+* [Résumé](/cv_sella_rafaeli_march_17.pdf)
 * [Contact](/contact.html)
 
 <div class='center'>
