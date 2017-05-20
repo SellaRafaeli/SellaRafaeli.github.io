@@ -1,6 +1,6 @@
 Hi, I'm Sella, a senior web developer and architect.
 
-I have 17 years of software development experience, working as a product manager, backend/frontend developer, team lead, CTO, and [consultant](/consulting). 
+I have 17 years of software development experience as a backend/frontend developer, team lead, CTO, and [consultant](/consulting). 
 
 I work primarily with JavaScript (Vanilla, jQuery, Vue, React, Angular1-2+, Node), Ruby (Rails, Sinatra) and Python (Django, Flask).
 
