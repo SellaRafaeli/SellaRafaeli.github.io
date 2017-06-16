@@ -4,7 +4,7 @@ I have 17 years of software development experience as a backend/frontend develop
 
 I work primarily with JavaScript (Vanilla, jQuery, Vue, React, Angular1-2+, Node), Ruby (Rails, Sinatra) and Python (Django, Flask).
 
-My previous experience includes 8200 (5 years), CS @ Hebrew University (*magna cum laude*), Fiverr (2 years), and a CTO of a social network, [yes.no](https://medium.com/@sellarafaeli/yes-no-architecture-of-a-social-network-startup-in-2016-d6d2989ca1b3) (10 employees).
+My previous experience includes 8200 (5 years), CS @ Hebrew University (*magna cum laude*), Fiverr (2 years), and CTO of a social network, [yes.no](https://medium.com/@sellarafaeli/yes-no-architecture-of-a-social-network-startup-in-2016-d6d2989ca1b3) (10 employees).
 
 You can read more [about me](/about.html), my [blog](/blog/index.html), my [résumé](/cv_sella_rafaeli_march_17.pdf), or [contact me](/contact.html).
 
