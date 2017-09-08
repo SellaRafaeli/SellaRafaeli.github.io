@@ -1,10 +1,10 @@
 ### Consulting
 
-I am a freelance full-stack web developer / consultant; my previous projects include things like:
+I am a freelance full-stack web developer consultant.
 
-* E-commerce marketplaces (like [Fiverr](https://fiverr.com))
-* Social Networks (like [yes.no](https://yes.no))
-* Back-Ends for Apps 
+I build web applications, both front-end and back-end. I either handle all of the web development myself (or use my own team), or I can work with your team. 
+
+I am an expert at JavaScript and Ruby.
 
 I am relatively expensive for a single individual, and this is because:
 
