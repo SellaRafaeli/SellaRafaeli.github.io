@@ -8,7 +8,6 @@ My previous experience includes 8200 (5 years), CS @ Hebrew University (*magna c
 
 You can read more [about me](/about.html), my [blog](/blog/index.html), my [résumé](/cv_sella_rafaeli_dec_17.pdf), or [contact me](/contact.html).
 
-
 <!-- I am also into [software](/software.html), [hiking](/hiking.html), [psychology](/psychology.html), [spirituality](/spirituality.html), and [languages](/languages.html). 
 
 * [About me](/about.html)
