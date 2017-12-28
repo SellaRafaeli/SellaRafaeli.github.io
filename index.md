@@ -4,7 +4,7 @@ I have 17 years of experience in software development and management as a backen
 
 I am an expert in all things JavaScript (including Vanilla, jQuery, Vue, React, Angular1-2+, Node), Ruby (Rails, Sinatra) and Python (Django, Flask).
 
-My previous experience includes 8200 (5 years), CS @ Hebrew University (*magna cum laude*), Fiverr (2 years), and CTO of a social network, [yes.no](https://medium.com/@sellarafaeli/yes-no-architecture-of-a-social-network-startup-in-2016-d6d2989ca1b3) (10 employees).
+My previous experience includes 8200 (5 years), CS @ Hebrew University (*magna cum laude*), Fiverr (2 years), and CTO of a social network, [yes.no](https://medium.com/@sellarafaeli/yes-no-architecture-of-a-social-network-startup-in-2016-d6d2989ca1b3) (10 employees). For the last couple of years I have been the web architect at [hysolate](https://www.hysolate.com/)
 
 You can read more [about me](/about.html), my [blog](/blog/index.html), my [résumé](/sella_rafaeli_cv_dec_17.pdf), or [contact me](/contact.html).
 
