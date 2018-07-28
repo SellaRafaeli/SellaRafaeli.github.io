@@ -3,6 +3,7 @@
 
 (now that's what I'm talking about)
 
+* <img src='/img/star.png' class='star'> [Dependency Madness](/blog/dependency_madness.html)
 * <img src='/img/star.png' class='star'> [My Software Background One-Pager](/software)
 * [MongoDB is a Great General-Purpose DB](/blog/mongodb_is_a_great_general_purpose_db.html)
 * [VanillaJS and jQuery - Minimal HTML Directives](/blog/vanillajs_and_jquery_kiss.html)
