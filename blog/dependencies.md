@@ -1,5 +1,5 @@
 <!-- {"created_at": "2018-07-27"} -->
-
+<span style='float: right'> 27/7/18 </span>
 ## Dependency Madness
 
 The amount of reliance many web developers have on 3rd-party dependencies is downright frightening. This is especially true in npm ecosystems.
@@ -8,7 +8,7 @@ A zeitgeist of using the latest fashionable frameworks and magical libraries, ov
 
 While often adding a third-party package is the path of least resistance - the accrued weight on the project adds up. Each package (and its own dependencies) add additional lines of code and memory now required by the app. Beyond being merely shoddy craftsmanship (which has been amply discussed, c.f. the left-pad debacle) this pattern is downright irresponsible. **Heavy reliance on 3rd-party code makes both the resource consumption and the security integrity of the app unmanageable, since you are literally now using code which you have no practical way of checking at all.**
 
-In the common case, you are just grabbing something some dude on the Internet wrote and boom! Now it's part of your app. With all of its dependencies -- written by further dudes and dudettes all over the world. So what do all these hundreds of packages now running in your app actually _do_? Nobody knows. Obviously most organizations will not conduct a review of a 3rd-party lib - even orgs with a strict review process on code checkins on their _own_ code. Hey, somebody else wrote it - it must be perfect. And uncompromised! And also all of its tree of dependencies is for sure uncompromised. 
+In the common case, you are just grabbing something some dude on the Internet wrote and boom! Now it's part of your app. With all of its dependencies -- written by further dudes and dudettes all over the world. So what do all these hundreds of packages now running in your app actually _do_? Nobody knows. Obviously most organizations will not conduct a review of a 3rd-party lib - even orgs with a strict review process on code checkins on their _own_ code. For some reasons, most orgs assume that if somebody else wrote it - it must be perfect. And uncompromised. As well as all of its dependencies. 
 
 So now your app has literally thousands of packages running in it. Written by hundreds of developers who you know nothing about. Doing... God knows what. Running in your FE or BE. Executing other people's code. People and code who you now implicitly trust with your data. 
 
