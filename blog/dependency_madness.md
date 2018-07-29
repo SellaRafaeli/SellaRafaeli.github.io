@@ -20,5 +20,7 @@ Remember the left-pad debacle, when half the Internet broke because some dude un
 
 So just consider: how many open-source packages are you running? How many lines of code? How many them are you _sure_ do not contain malware that totally and completely compromises your data?
 
-Next time, maybe reconsider importing random code from random people, and just write that function yourself. 
+Some awareness to this issue has prompted custom solutions; services which warn you about **known** vulnerabilities in your dependencies. Github is one prominent tool which does this; Snyk is another example. However, while these are steps in the right direction, they highlight the issue: "3rd-party dependencies" are essentially "some dude's code", running equally with your own code. 
+
+Next time, maybe reconsider importing random code from random people, and reflect if the benefits truly outweigh the risks. 
 
