@@ -1,5 +1,5 @@
 <!-- {"created_at": "2018-07-27"} -->
-<span style='float: right'> 27/7/18 </span>
+<span class='date'> 27/7/18 </span>
 ## Dependency Madness
 
 The amount of reliance many web developers have on 3rd-party dependencies is downright frightening. This is especially true in npm ecosystems.

@@ -3,35 +3,36 @@
 
 (now that's what I'm talking about)
 
-* <img src='/img/star.png' class='star'> [Dependency Madness](/blog/dependency_madness.html)
-* <img src='/img/star.png' class='star'> [My Software Background One-Pager](/software)
-* [MongoDB is a Great General-Purpose DB](/blog/mongodb_is_a_great_general_purpose_db.html)
-* [VanillaJS and jQuery - Minimal HTML Directives](/blog/vanillajs_and_jquery_kiss.html)
-* <img src='/img/star.png' class='star'> [Give First-Class, Personalized Treatment to Anonymous Users](/blog/give_first_class_personalized_treatment_to_anonymous_users.html)
-* <img src='/img/star.png' class='star'> [Secure simple sign-in links](simple_secure_sign_in_links.html)
-* <img src='/img/star.png' class='star'> [No more username/passwords: Just use a 3rd party for authentication.](https://medium.com/@sellarafaeli/no-more-username-passwords-just-use-a-3rd-party-for-authentication-59b12db092a4)
-* [MongoDB Joins with simple Ruby](https://medium.com/@sellarafaeli/mongo-joins-across-collections-with-ruby-504e3351d278#.qnh1yzjfk)
-* [Spreadsheet As An Admin DB Interface](https://medium.com/@sellarafaeli/just-use-a-spreadsheet-spreadsheet-as-an-admin-interface-2ed789a93118#.ksiiq89t2)
-* [Sensitive Female Software Engineers Considered Harmful](https://medium.com/@sellarafaeli/sensitive-female-engineers-considered-harmful-faa91a193d92#.p8jaost2u)
-* [Ruby + MongoDB MapReduce - Dynamically Find All Keys in Collection](ruby_mongodb_mapreduce_all_keys_in_collection.html)
-* [SNM - Social Network / Marketplace as a service/product](snm_as_a_service_product.html)
-* [BaaS - Backend-as-a-Service](baas.html)
-* <img src='/img/star.png' class='star'> [Programming is the New Literacy](https://medium.com/@sellarafaeli/programming-is-the-new-literacy-4a0319abe726)
-* <img src='/img/star.png' class='star'> [yes.no — the architecture of a social network startup in 2016](https://medium.com/@sellarafaeli/yes-no-architecture-of-a-social-network-startup-in-2016-d6d2989ca1b3)
-* [Simple Sessions](simple_sessions.html)<span class='created_at'>2015-02-05</span>
-* <img src='/img/star.png' class='star'> [Whitehat Postmortem Example](whitehat_postmortem_example.html)<span class='created_at'>2014-12-25</span>
-* <img src='/img/star.png' class='star'> [How To Recruit Software Engineers](how_to_recruit_software_engineers.html)<span class='created_at'>2014-12-15</span>
-* [Responsible Software](responsible_software.html)<span class='created_at'>2014-12-14</span>
-* [Monads](monads.html)<span class='created_at'>2014-11-29</span>
-* [Ruby Monkeypatching Friendly Hashes](ruby_monkeypatching_friendly_hashes.html)<span class='created_at'>2014-11-24</span>
-* [JabJS - Introduction](jabjs-introduction.html)<span class='created_at'>2014-11-19</span>
-* <img src='/img/star.png' class='star'> [Native JavaScript Data Binding](native_javascript_data_binding.html)<span class='created_at'>2014-11-10</span>
-* <img src='/img/star.png' class='star'> [Idempotency](idempotency.html)<span class='created_at'>2014-09-07</span>
-* [Daat - A Good Hebrew Content Site](https://medium.com/@sellarafaeli/reading-4bb50bc5168b)<span class='created_at'>2014-09-02</span>
-* [Cofounder](cofounder.html)<span class='created_at'>2014-08-08</span>
-* <img src='/img/star.png' class='star'> [Git Book](git-book.html)<span class='created_at'>2014-07-01</span>
-* <img src='/img/star.png' class='star'> [Git Rebase -i Belong To Us](https://medium.com/@sellarafaeli/git-rebase-i-belong-to-us-4d7010387683)<span class='created_at'>2014-02-17</span>
-* [Git 'Rebase' For Startups](https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14)<span class='created_at'>2014-01-30</span>
+* <img src='/img/star.png' class='star'> [Dependency Madness](/blog/dependency_madness.html) <span class='date'> 27/7/18 </span>
+* <img src='/img/star.png' class='star'> [My Software Background One-Pager](/software) 
+* [VanillaJS and jQuery - Minimal HTML Directives](/blog/vanillajs_and_jquery_kiss.html) <span 
+* [MongoDB is a Great General-Purpose DB](/blog/mongodb_is_a_great_general_purpose_db.html) <span class='date'> 20/7/17 </span>
+class='date'> 13/7/18 </span>
+* <img src='/img/star.png' class='star'> [Give First-Class, Personalized Treatment to Anonymous Users](/blog/give_first_class_personalized_treatment_to_anonymous_users.html) <span class='date'> 6/7/17 </span>
+* <img src='/img/star.png' class='star'> [Secure simple sign-in links](simple_secure_sign_in_links.html) <span class='date'> 4/6/17 </span>
+* <img src='/img/star.png' class='star'> [No more username/passwords: Just use a 3rd party for authentication.](https://medium.com/@sellarafaeli/no-more-username-passwords-just-use-a-3rd-party-for-authentication-59b12db092a4) <span class='date'> 9/5/17 </span>
+* [MongoDB Joins with simple Ruby](https://medium.com/@sellarafaeli/mongo-joins-across-collections-with-ruby-504e3351d278#.qnh1yzjfk) <span class='date'> 15/4/17 </span>
+* [Spreadsheet As An Admin DB Interface](https://medium.com/@sellarafaeli/just-use-a-spreadsheet-spreadsheet-as-an-admin-interface-2ed789a93118#.ksiiq89t2) <span class='date'> 21/3/17 </span>
+* [Sensitive Female Software Engineers Considered Harmful](https://medium.com/@sellarafaeli/sensitive-female-engineers-considered-harmful-faa91a193d92#.p8jaost2u) <span class='date'> 9/3/17 </span>
+* [Ruby + MongoDB MapReduce - Dynamically Find All Keys in Collection](ruby_mongodb_mapreduce_all_keys_in_collection.html) <span class='date'> 2/3/17 </span>
+* [SNM - Social Network / Marketplace as a service/product](snm_as_a_service_product.html) <span class='date'> 2/3/17 </span>
+* [BaaS - Backend-as-a-Service](baas.html) <span class='date'> 20/8/16 </span>
+* <img src='/img/star.png' class='star'> [Programming is the New Literacy](https://medium.com/@sellarafaeli/programming-is-the-new-literacy-4a0319abe726) <span class='date'> 29/2/16 </span>
+* <img src='/img/star.png' class='star'> [yes.no — the architecture of a social network startup in 2016](https://medium.com/@sellarafaeli/yes-no-architecture-of-a-social-network-startup-in-2016-d6d2989ca1b3) <span class='date'> 23/2/16 </span>
+* [Simple Sessions](simple_sessions.html)<span class='created_at'>05/02/15</span>
+* <img src='/img/star.png' class='star'> [Whitehat Postmortem Example](whitehat_postmortem_example.html)<span class='created_at'>25/12/14</span>
+* <img src='/img/star.png' class='star'> [How To Recruit Software Engineers](how_to_recruit_software_engineers.html)<span class='created_at'>15/12/14</span>
+* [Responsible Software](responsible_software.html)<span class='created_at'>14/12/14</span>
+* [Monads](monads.html)<span class='created_at'>29/11/14</span>
+* [Ruby Monkeypatching Friendly Hashes](ruby_monkeypatching_friendly_hashes.html)<span class='created_at'>24/11/14</span>
+* [JabJS - Introduction](jabjs-introduction.html)<span class='created_at'>19/11/14</span>
+* <img src='/img/star.png' class='star'> [Native JavaScript Data Binding](native_javascript_data_binding.html)<span class='created_at'>10/11/14</span>
+* <img src='/img/star.png' class='star'> [Idempotency](idempotency.html)<span class='created_at'>07/09/14</span>
+* [Daat - A Good Hebrew Content Site](https://medium.com/@sellarafaeli/reading-4bb50bc5168b)<span class='created_at'>02/09/14</span>
+* [Cofounder](cofounder.html)<span class='created_at'>08/08/14</span>
+* <img src='/img/star.png' class='star'> [Git Book](git-book.html)<span class='created_at'>01/07/14</span>
+* <img src='/img/star.png' class='star'> [Git Rebase -i Belong To Us](https://medium.com/@sellarafaeli/git-rebase-i-belong-to-us-4d7010387683)<span class='created_at'>17/02/14</span>
+* [Git 'Rebase' For Startups](https://medium.com/@sellarafaeli/we-use-git-rebase-and-so-should-you-be89d1932a14)<span class='created_at'>30/01/14</span>
 * [Mongo Native TTL](https://sellarafaeli.wordpress.com/2014/07/22/mongo-native-ttl/)
 * [Mongo Console BI Syntax Essentials](https://sellarafaeli.wordpress.com/2014/05/15/mongo-console-bi-syntax-essentials/)
 * [Node Background Processing Awesomeness](https://sellarafaeli.wordpress.com/2014/04/01/node_background_processing_awesomeness/)
