@@ -5,9 +5,8 @@
 
 * <img src='/img/star.png' class='star'> [Dependency Madness](/blog/dependency_madness.html) <span class='date'> 27/7/18 </span>
 * <img src='/img/star.png' class='star'> [My Software Background One-Pager](/software) 
-* [VanillaJS and jQuery - Minimal HTML Directives](/blog/vanillajs_and_jquery_kiss.html) <span 
+* [VanillaJS and jQuery - Minimal HTML Directives](/blog/vanillajs_and_jquery_kiss.html)  <span class='date'> 22/7/17 </span>
 * [MongoDB is a Great General-Purpose DB](/blog/mongodb_is_a_great_general_purpose_db.html) <span class='date'> 20/7/17 </span>
-class='date'> 13/7/18 </span>
 * <img src='/img/star.png' class='star'> [Give First-Class, Personalized Treatment to Anonymous Users](/blog/give_first_class_personalized_treatment_to_anonymous_users.html) <span class='date'> 6/7/17 </span>
 * <img src='/img/star.png' class='star'> [Secure simple sign-in links](simple_secure_sign_in_links.html) <span class='date'> 4/6/17 </span>
 * <img src='/img/star.png' class='star'> [No more username/passwords: Just use a 3rd party for authentication.](https://medium.com/@sellarafaeli/no-more-username-passwords-just-use-a-3rd-party-for-authentication-59b12db092a4) <span class='date'> 9/5/17 </span>
