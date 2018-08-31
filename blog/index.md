@@ -12,7 +12,6 @@
 * <img src='/img/star.png' class='star'> [No more username/passwords: Just use a 3rd party for authentication.](https://medium.com/@sellarafaeli/no-more-username-passwords-just-use-a-3rd-party-for-authentication-59b12db092a4) <span class='date'> 9/5/17 </span>
 * [MongoDB Joins with simple Ruby](https://medium.com/@sellarafaeli/mongo-joins-across-collections-with-ruby-504e3351d278#.qnh1yzjfk) <span class='date'> 15/4/17 </span>
 * [Spreadsheet As An Admin DB Interface](https://medium.com/@sellarafaeli/just-use-a-spreadsheet-spreadsheet-as-an-admin-interface-2ed789a93118#.ksiiq89t2) <span class='date'> 21/3/17 </span>
-* [Sensitive Female Software Engineers Considered Harmful](https://medium.com/@sellarafaeli/sensitive-female-engineers-considered-harmful-faa91a193d92#.p8jaost2u) <span class='date'> 9/3/17 </span>
 * [Ruby + MongoDB MapReduce - Dynamically Find All Keys in Collection](ruby_mongodb_mapreduce_all_keys_in_collection.html) <span class='date'> 2/3/17 </span>
 * [SNM - Social Network / Marketplace as a service/product](snm_as_a_service_product.html) <span class='date'> 2/3/17 </span>
 * [BaaS - Backend-as-a-Service](baas.html) <span class='date'> 20/8/16 </span>
