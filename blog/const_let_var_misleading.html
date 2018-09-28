@@ -1,0 +1,91 @@
+<html>
+<head> 
+    <meta charset='utf-8'>
+    <title>const_let_var_misleading</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- <link rel="shortcut icon" href="/favicon_thumb.ico"/> -->
+    <link rel="shortcut icon" href="/img/whatsapp_profile.jpeg"/>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
+    <link href="/css/main.css" rel="stylesheet"></link>
+
+    <!--     <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
+    <link href="/css/github_markdown.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Aua5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <!-- <link href="/css/mobile.css" rel="stylesheet" media="handheld">
+    <link href="/css/swiss.css" rel="stylesheet"></link>
+    <link href="/css/markdown.css" rel="stylesheet"></link> -->
+</head>
+
+<body>
+    <div class=top>
+        <a href=/>sellarafaeli.com</a>
+    </div>  
+
+    <article class=markdown-body>                      
+        <h1 id="let-vs-const-vs-var---misleading">Let vs Const vs Var - Misleading</h1>
+
+<p>‘New’ versions of JS support let and const (vs var) which leads to endless discussions about when to use which. Sadly in the real world, it doesn’t really matter.</p>
+
+<p><strong><code>const</code> only enforces constantness on a superficial level, at the base variable assignment.</strong></p>
+
+<pre><code>const x = {};
+x = 'foo' //boom
+</code></pre>
+
+<p>It famously does not prevent modifying internal fields of an object or array.</p>
+
+<pre><code>const x = {msg: 'hi'}
+x.msg = 'bye' //works. uh-oh
+</code></pre>
+
+<p><code>const</code> simply doesn’t guarantee complete <code>const</code>-ness. To clarify: <em>a variable declared as <code>const</code> can still change its value.</em> This is clearly misleading; the whole point of a <code>const</code> statement is to signify the value will not change. The net result is even worse than not using <code>const</code> to begin with - you have now indicated a misleading aspect about the data, which the interpreter/transpiler will not enforce.</p>
+
+<p>So <code>const</code> is not “really” const. This leads to separate styles of choosing when to use <code>let</code> vs <code>const</code> - should <code>const</code> values only be used for ‘deep’ constant-ness (non-mutating state, including properties, as logically expected) or ‘shallow’ constant-ness (as defined by the interpreter)? I strongly prefer the first one – don’t use <code>const</code> for values that change – but the very fact that there are two separate valid interpretations means that when you’re reading code, you can’t fully make any assumptions about whether the value changes or not, and thus the whole declaration is almost meaningless. (A caveat is that const ensures the variable won’t be assigned a completely new value, so const is still useful for primitives.)</p>
+
+<p>Basically at this point, a <code>const</code> for a non-primitive means a value will either change… or it won’t. Since the syntax itself cannot reliably indicate whether the value is really constant, you as a writer cannot signal to a future reader whether the value is truly constant or not – and a reader cannot assume anything from a variable being declared as const.</p>
+
+<p>To make things even worse, the mere fact that there are separate conflicting ways in which you can ‘use’ const (as described above) means that you will have to guess which way the original author ‘meant’. All of this takes significant cognitive overhead when just reading a variable, and creates an ensuing muddy bikeshedding discussion about what to use when, which costs more cognitive effort than it saves.</p>
+
+<p>As a concrete alternative, real consts could be in UPPERCASE, which is well-known convention for constness. These just don’t get protection by the interpreter, but the meaning to the reader is clear and obvious.</p>
+
+<pre><code>FOO    = 'bar'
+SERVER = {url: 'google.com'}
+</code></pre>
+
+<p>Everything else can be <code>let</code> or <code>var</code>. <code>let</code> is the new ‘cool’ way to declare local variables, but is only functionally better if you have recurring variable names within different blocks in the same function, which is… better rectified by not reusing the same variable name in the function.)</p>
+
+<p>Use whatever you want for const/let/var, it matters little. Focus on architecture and semantics more than syntax.</p>
+
+    </article>
+    
+    <!-- <footer style='font-size:80%'>
+        <div style='border-top:2px solid lightgrey; margin: 15px'></div>
+        Feel free to <a href='/contact'>drop me a line</a>. I <a href='/blog'>write extensively</a> about advanced web development and am available for <a href='/consulting.html'>consulting</a> anywhere in the world. 
+        <div>© <a href='/'>sellarafaeli.com</a>, 2018</div>
+    </footer> -->
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-100769576-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+    <script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(100778787);
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//static.getclicky.com/js';
+      ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+    </script>
+</body>
+</html>
