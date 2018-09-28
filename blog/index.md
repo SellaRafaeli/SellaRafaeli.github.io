@@ -3,9 +3,9 @@
 
 (now that's what I'm talking about)
 
+* [JS const/let/var - misleading && bikeshedding](/blog/const_let_var_misleading.html) <span class='date'>28/9/18</span>
 * <img src='/img/star.png' class='star'> [Dependency Madness](/blog/dependency_madness.html) <span class='date'> 27/7/18 </span>
 <!-- * <img src='/img/star.png' class='star'> [My Software Background One-Pager](/software)  -->
-* [JS const/let/var - misleading && bikeshedding](/blog/const_let_var_misleading.html) <span class='date'>28/9/18</span>
 * [VanillaJS and jQuery - Minimal HTML Directives](/blog/vanillajs_and_jquery_kiss.html)  <span class='date'> 22/7/17 </span>
 * [MongoDB is a Great General-Purpose DB](/blog/mongodb_is_a_great_general_purpose_db.html) <span class='date'> 20/7/17 </span>
 * <img src='/img/star.png' class='star'> [Give First-Class, Personalized Treatment to Anonymous Users](/blog/give_first_class_personalized_treatment_to_anonymous_users.html) <span class='date'> 6/7/17 </span>
